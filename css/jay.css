@@ -526,7 +526,7 @@ li { margin-left: -1em }
 a:link,a:visited,a
 {
   /*color: #f03;*/
-  color: #000;
+  color: #1e90ff;
   font-style: italic;
   text-decoration: none;
   cursor: pointer;
@@ -540,3 +540,14 @@ a:hover,a:active
   color: #000;
 }
 
+ul li strong {
+  color: #FF7A00; /* Highlighted orange for the titles */
+  font-weight: bold; /* Bold for emphasis */
+  text-decoration: underline; /* Underline the key highlights */
+}
+
+.LinkColor {
+  color: #1e90ff; 
+  font-style: italic;
+  text-decoration: none; 
+}
