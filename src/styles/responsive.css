@@ -1,0 +1,78 @@
+/* MOBILE + TABLET */
+@media (max-width: 1023px) {
+
+    .navbar-links,
+    .navbar-cta {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .sidebar,
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease;
+    }
+
+    .sidebar.open {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Global background image */
+
+@media (max-width: 1023px) {
+    .app-background {
+        background-attachment: scroll;
+    }
+}
+
+/* HERO */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 24px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero-right {
+        order: -1;
+        /* image comes first */
+    }
+
+    .hero-left {
+        order: 2;
+    }
+}

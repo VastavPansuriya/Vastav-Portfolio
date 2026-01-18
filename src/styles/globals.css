@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-mono);
+    line-height: 1.7;
+}
+
+/* GLOBAL UI POLISH */
+* {
+    caret-color: transparent;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+    caret-color: auto;
+    cursor: text;
+}
+
+body {
+    cursor: default;
+}
+
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-soft);
+}
+
+body.sidebar-open {
+    overflow: hidden;
+}
+
+
+/* GLOBAL BACKGROUND */
+.app-background {
+    min-height: 100vh;
+    width: 100%;
+    background-image:
+        linear-gradient(rgba(15, 13, 23, 0.90),
+            rgba(15, 13, 23, 0.90)),
+        url("/bg2.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p,
+.long-text,
+.description {
+    font-family: var(--font-ui);
+    line-height: 1.7;
+}
+
+.text-ui {
+    font-family: var(--font-ui);
+}
+
+.text-mono {
+    font-family: var(--font-mono);
+}
+
+.highlight {
+    color: var(--accent-soft);
+    font-weight: 500;
+}

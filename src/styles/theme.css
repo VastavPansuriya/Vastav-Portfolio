@@ -1,0 +1,59 @@
+/* :root {
+    --bg: #0F0D17;
+    --surface: #19162A;
+
+    --accent: #A78BFA;
+    --accent-soft: #C4B5FD;
+
+    --text: #F4F4F5;
+    --text-muted: #A1A1AA;
+
+    --border: #2A2545;
+
+    --font-ui: "Inter", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+} */
+
+
+:root {
+    /* Base */
+    --background: #0E2430;
+    /* deep blue/teal background */
+    --surface: #122E3B;
+    /* cards / panels */
+    --surface-soft: #163645;
+
+    /* Accent (FEEL orange) */
+    --accent: #FF4D00;
+    /* primary orange */
+    --accent-soft: #FFB703;
+    /* yellow accent */
+
+    /* Text */
+    --text: #F8FAFC;
+    /* main text */
+    --text-muted: #B6C2CC;
+    /* secondary text */
+
+    /* Borders */
+    --border: #1F4456;
+
+    /* Utility */
+    --highlight: #00C2FF;
+    /* links / engine names */
+
+    --font-ui: "Inter", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+}
+
+
+
+/* :root {
+    --background: #0B0F0C;
+    --surface: #121915;
+    --accent: #4ADE80;
+    --accent-soft: #86EFAC;
+    --text: #ECFDF5;
+    --text-muted: #9CA3AF;
+    --border: #1F2E24;
+} */
