@@ -2,6 +2,23 @@ import { GithubLogoIcon, LinkedinLogo, Mailbox } from "@phosphor-icons/react";
 
 
 const ContactSection = () => {
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+
+        fetch("/", {
+            method: "POST",
+            body: new FormData(form),
+        })
+            .then(() => {
+                alert("Message sent successfully 🚀");
+                form.reset();
+            })
+            .catch(() => {
+                alert("Something went wrong 😕");
+            });
+    };
     return (
         <section className="contact-section" id="contact">
             <div className="contact-inner">
@@ -56,6 +73,7 @@ const ContactSection = () => {
                         name="contact"
                         method="POST"
                         data-netlify="true"
+                        onSubmit={handleSubmit}
                     >
                         <input type="hidden" name="form-name" value="contact" />
 

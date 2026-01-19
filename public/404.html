@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>404 – Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+        }
+
+        /* Full background */
+        .app-background {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-image:
+                linear-gradient(rgba(15, 13, 23, 0.90),
+                    rgba(15, 13, 23, 0.90)),
+                url("./bg2.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Card */
+        .error-card {
+            background: #122e3b76;
+            border: 1px solid #1F4456;
+            padding: 28px 32px;
+            border-radius: 12px;
+            width: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .error-card img {
+            max-width: 240px;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #b5b5b5;
+            margin: 12px 0 20px;
+        }
+
+        a {
+            color: #ff8a00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-background">
+        <div class="error-card">
+            <img src="./error_02.png" alt="404 Error" />
+            <p>This page doesn’t exist.</p>
+            <a href="/">← Back to home</a>
+        </div>
+    </div>
+</body>
+
+</html>
