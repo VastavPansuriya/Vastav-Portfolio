@@ -1,3 +1,5 @@
+import ContactSection from "../components/contact/ContactSection";
+
 const Home = () => {
     return (
 
@@ -8,9 +10,9 @@ const Home = () => {
                         I’m Vastav
                     </h1>
 
-                    <p style={{ color: "var(--text-muted)", marginBottom: "20px" }}>
+                    <span style={{ color: "var(--text-muted)", marginBottom: "20px" }}>
                         Systems • Performance • Gameplay
-                    </p>
+                    </span>
                     {/* <h3>Performance Highlight</h3> */}
                     <p style={{ marginTop: "8px" }}>
                         A game programmer with nearly <span className="highlight">four years </span> of experience in the industry. I started my journey with <span className="highlight">Unity and C #</span>, without prioritising college, and that to build only the required knowledge. Over time, I improved a lot by learning a variety of coding and game development skills, Such as Code architecture and principles, Unity engine relevant stuff, third-party tools and API implementations, system design and more.
@@ -35,6 +37,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <ContactSection />
         </main >
     );
 };

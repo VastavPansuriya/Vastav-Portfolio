@@ -76,3 +76,27 @@
         order: 2;
     }
 }
+
+/* ContactSection */
+
+@media (max-width: 900px) {
+    .contact-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
