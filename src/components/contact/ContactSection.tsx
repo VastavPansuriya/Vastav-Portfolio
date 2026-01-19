@@ -2,6 +2,22 @@ import { GithubLogoIcon, LinkedinLogo, Mailbox } from "@phosphor-icons/react";
 
 
 const ContactSection = () => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+
+        fetch("/", {
+            method: "POST",
+            body: new FormData(form),
+        })
+            .then(() => {
+                alert("Message sent successfully 🚀");
+                form.reset();
+            })
+            .catch(() => {
+                alert("Something went wrong 😕");
+            });
+    };
     return (
         <section className="contact-section" id="contact">
             <div className="contact-inner">
@@ -56,23 +72,16 @@ const ContactSection = () => {
                         name="contact"
                         method="POST"
                         data-netlify="true"
-                        netlify-honeypot="bot-field"
+                        data-netlify-honeypot="bot-field"
+                        onSubmit={handleSubmit}
                     >
-                        {/* REQUIRED hidden fields */}
                         <input type="hidden" name="form-name" value="contact" />
-
-                        <p hidden>
-                            <label>
-                                Don’t fill this out: <input name="bot-field" />
-                            </label>
-                        </p>
 
                         <input type="text" name="name" placeholder="Name" required />
                         <input type="email" name="email" placeholder="Email" required />
                         <textarea name="message" placeholder="Message" rows={5} required />
 
                         <button type="submit">Send message</button>
-                        <input type="hidden" name="redirect" value="/thank-you" />
                     </form>
 
                 </div>
