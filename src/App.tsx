@@ -1,24 +1,26 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
 import Home from "./pages/Home";
-import Footer from "./components/layout/Footer";
 import NotFound from "./components/layout/NotFound";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Experience from "./pages/Experience";
+import MainLayout from "./components/layout/MainLayout";
 
 function App() {
 
   return (
     <div className="app-background">
-      <Navbar />
-
       <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
 
-        <Route path="/" element={<Home />} />
-
+        {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-
-      <Footer />
     </div>
   )
 }

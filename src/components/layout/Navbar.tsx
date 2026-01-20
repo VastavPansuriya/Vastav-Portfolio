@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -9,21 +10,21 @@ const Navbar = () => {
     }, [open]);
 
     return (
-        <header className="navbar">
+        <header className="navbar ">
             <div className="navbar-inner">
-                <div className="navbar-logo">VASTAV</div>
+                <div className="navbar-logo"></div>
 
                 {/* Desktop links */}
                 <nav className="navbar-links">
-                    <a href="#features">Features</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#contact">Contact</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/experience">Experience</Link>
+                    <Link to="/contact">Contact</Link>
                 </nav>
 
-                <a className="navbar-cta" href="#contact">
+                {/* <a className="navbar-cta" href="/contact">
                     Contact Me
-                </a>
+                </a> */}
 
                 {/* Mobile menu toggle */}
                 <button
@@ -50,10 +51,10 @@ const Navbar = () => {
                 </button>
 
                 <nav className="sidebar-links">
-                    <a onClick={() => setOpen(false)} href="#features">Features</a>
-                    <a onClick={() => setOpen(false)} href="#projects">Projects</a>
-                    <a onClick={() => setOpen(false)} href="#experience">Experience</a>
-                    <a onClick={() => setOpen(false)} href="#contact">Contact</a>
+                    <Link onClick={() => setOpen(false)} to="/">Home</Link>
+                    <Link onClick={() => setOpen(false)} to="/about">About</Link>
+                    <Link onClick={() => setOpen(false)} to="/experience">Experience</Link>
+                    <Link onClick={() => setOpen(false)} to="/contact">Contact</Link>
                 </nav>
             </aside>
         </header>

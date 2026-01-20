@@ -22,14 +22,15 @@ const NotFound = () => {
                 }}
             >
                 <img
-                    src="/error_02.png"
+                    src="/404cat.gif"
                     alt="404"
-                    style={{ maxWidth: "260px", marginBottom: "16px" }}
+                    style={{ width: "500px", borderRadius: "8px", marginBottom: "24px" }}
                 />
-                {/* <h2>Page not found</h2>
+                <h2>Page not found</h2>
                 <p style={{ color: "#b5b5b5" }}>
                     This page doesn’t exist or was moved.
-                </p> */}
+                </p>
+                
                 <div>
                     <a
                         href="/"

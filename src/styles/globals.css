@@ -11,6 +11,13 @@ body {
     line-height: 1.7;
 }
 
+html,
+body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
 /* GLOBAL UI POLISH */
 * {
     caret-color: transparent;
@@ -44,10 +51,10 @@ body.sidebar-open {
 
 /* GLOBAL BACKGROUND */
 .app-background {
-    min-height: 100vh;
+    min-height: 100svh;
     width: 100%;
     background-image:
-        linear-gradient(rgba(15, 13, 23, 0.90),
+        linear-gradient(rgba(15, 13, 23, 1.9),
             rgba(15, 13, 23, 0.90)),
         url("/bg2.png");
 
