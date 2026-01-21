@@ -83,3 +83,13 @@ p,
     color: var(--accent-soft);
     font-weight: 500;
 }
+
+.app-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    flex: 1;
+}

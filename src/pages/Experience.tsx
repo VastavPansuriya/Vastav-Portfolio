@@ -17,19 +17,19 @@ const experienceData: ExperienceItem[] = [
                 id: "1",
                 title: "Fears to Fathom - Scratch Creek",
                 image: "/fears-to-fathom.jpg",
-                link: "/fears-to-fathom",
+                link: "/experience/studio-xyz",
             },
             {
                 id: "2",
                 title: "F2F Android/iOS",
-                image: "/projects/ai.jpg",
-                link: "/f2f-mobile",
+                image: "/f2f.png",
+                link: "/experience/studio-xyz",
             },
             {
                 id: "3",
                 title: "Ununounced",
-                image: "/projects/ai.jpg",
-                link: "/ununounced",
+                image: "/ununounced.webp",
+                link: "/experience/studio-xyz",
             },
         ],
     },
@@ -141,13 +141,13 @@ const personalprojects: ExperienceItem[] = [
             {
                 id: "ZeroEffort",
                 title: "Zero Effort",
-                image: "public/zeroeffort.png",
+                image: "/zeroeffort.png",
                 link: "/zeroeffort"
             },
             {
                 id: "SmileSnake",
                 title: "Smile Snake",
-                image: "public/smilesnake.png",
+                image: "/smilesnake.png",
                 link: "/smilesnake"
             },
             {

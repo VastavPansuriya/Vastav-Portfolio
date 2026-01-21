@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 const MainLayout = () => {
     return (
-        <div className="app-background">
+        <div className="app-root">
             <Navbar />
-            <main>
+            <main className="app-content">
                 <Outlet />
             </main>
             <Footer />

@@ -1,4 +1,4 @@
-import { GithubLogoIcon, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
+import { CaretDoubleRight, GithubLogoIcon, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
 
 
 const About = () => {
@@ -29,6 +29,8 @@ const About = () => {
                     <a className="resume-pdf" href="https://github.com/VastavPansuriya"
                         target="_blank"
                         rel="noopener noreferrer"><GithubLogoIcon size={20} weight="fill" style={{ marginTop: "2px" }} /></a>
+
+                    <a className="resume-pdf contact-icon" href="/experience"><CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} /></a>
                 </div>
 
                 <div className="hero-right">

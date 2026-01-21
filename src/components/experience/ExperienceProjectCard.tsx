@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Props = {
     title: string;
     image: string;
@@ -6,14 +8,13 @@ type Props = {
 
 const ExperienceProjectCard = ({ title, image, link }: Props) => {
     return (
-        <a
-            href={link}
+        <Link
+            to={link}
             className="exp-project-card"
-            rel="noopener noreferrer"
         >
             <img src={image} alt={title} />
             <span>{title}</span>
-        </a>
+        </Link>
     );
 };
 
