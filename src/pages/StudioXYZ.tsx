@@ -7,7 +7,7 @@ const fearstofathom: ExperienceItem[] = [
     {
         type: "work",
         summary: (
-            <div style={{ marginTop: "20px" }}>
+            <div>
                 <h4 className="f2f-heading-h4">Fears to Fathom - Scratch Creek</h4>
 
                 <div className="fears-to-fathom-poster">
@@ -40,7 +40,7 @@ const f2fAndroidiOS: ExperienceItem[] = [
     {
         type: "work",
         summary: (
-            <div style={{ marginTop: "20px" }}>
+            <div>
 
                 <h4 className="f2f-heading-h4">F2F Android/iOS</h4>
                 <div className="fears-to-fathom-poster">
@@ -78,7 +78,7 @@ const ununounced: ExperienceItem[] = [
     {
         type: "work",
         summary: (
-            <div style={{ marginTop: "20px" }}>
+            <div>
 
                 <h4 className="f2f-heading-h4">Ununounced</h4>
                 <div className="fears-to-fathom-poster">

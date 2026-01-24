@@ -24,7 +24,7 @@ const ExperienceAccordion = ({ data }: Props) => {
                 role={!isPersonal && hasExpandableContent ? "button" : undefined}
                 aria-expanded={open}
             >
-                <div className="header-left mt-16">
+                <div className="header-left">
                     {data.logo && (
                         <div className="company-logo">
                             <img src={data.logo} alt={`${data.company} logo`} />
@@ -38,7 +38,7 @@ const ExperienceAccordion = ({ data }: Props) => {
                 </div>
 
                 {!isPersonal && data.start && data.end && (
-                    <div className="header-right mt-16">
+                    <div className="header-right">
                         <div className="experience-dates">
                             <span className="date-start">Started: {data.start},</span>
                             <span className="date-end">Ended: {data.end}</span>
