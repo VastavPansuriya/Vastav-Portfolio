@@ -1,4 +1,5 @@
 import { CaretDoubleRight, GithubLogoIcon, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -18,19 +19,19 @@ const About = () => {
                     <p style={{ marginTop: "8px", marginBottom: "15px" }}>
                         A game programmer with nearly <a href="/experience"><span className="highlight"><u>four years  of experience </u></span></a> in the industry. I started my journey with <span className="highlight">Unity and C #</span>, without prioritising college, and that to build only the required knowledge. Over time, I improved a lot by learning a variety of coding and game development skills, Such as Code architecture and principles, Unity engine relevant stuff, third-party tools and API implementations, system design and more.
                     </p>
-                    <a className="resume-pdf" href="/Vastav-CV.pdf"
+                    <Link className="resume-pdf" to="/Vastav-Pansuriya.pdf"
                         target="_blank"
-                        rel="noopener noreferrer"><ReadCvLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></a>
+                        rel="noopener noreferrer"><ReadCvLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                    <a className="resume-pdf" href="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/"
+                    <Link className="resume-pdf" to="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/"
                         target="_blank"
-                        rel="noopener noreferrer"><LinkedinLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></a>
+                        rel="noopener noreferrer"><LinkedinLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                    <a className="resume-pdf" href="https://github.com/VastavPansuriya"
+                    <Link className="resume-pdf" to="https://github.com/VastavPansuriya"
                         target="_blank"
-                        rel="noopener noreferrer"><GithubLogoIcon size={20} weight="fill" style={{ marginTop: "2px" }} /></a>
+                        rel="noopener noreferrer"><GithubLogoIcon size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                    <a className="resume-pdf contact-icon" href="/experience"><CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} /></a>
+                    <Link className="resume-pdf contact-icon" to="/experience"><CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
                 </div>
 
                 <div className="hero-right">
