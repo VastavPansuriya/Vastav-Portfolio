@@ -8,12 +8,12 @@ const fearstofathom: ExperienceItem[] = [
         type: "work",
         summary: (
             <div style={{ marginTop: "20px" }}>
+                <h4 className="f2f-heading-h4">Fears to Fathom - Scratch Creek</h4>
 
                 <div className="fears-to-fathom-poster">
                     <img src="/fears-to-fathom-poster.jpg" alt="fears-to-fathom" />
-                    <img src="/fears-to-fathom-poster2.jpg" alt="fears-to-fathom" />
+                    {/* <img src="/fears-to-fathom-poster2.jpg" alt="fears-to-fathom" /> */}
                 </div>
-                <h4 className="contact-tag contact-icon">Fears to Fathom - Scratch Creek</h4>
 
                 <div className="experience-text ml-20">
                     <ul>
@@ -42,11 +42,12 @@ const f2fAndroidiOS: ExperienceItem[] = [
         summary: (
             <div style={{ marginTop: "20px" }}>
 
+                <h4 className="f2f-heading-h4">F2F Android/iOS</h4>
                 <div className="fears-to-fathom-poster">
-                    <img src="/f2f-poster.jpg" alt="fears-to-fathom" />
-                    <img src="/f2f-poster2.jpg" alt="fears-to-fathom" />
+                    {/* <img src="/f2f-poster.jpg" alt="fears-to-fathom" /> */}
+                    {/* <img src="/f2f-poster2.jpg" alt="fears-to-fathom" /> */}
+                    <iframe src="https://www.youtube.com/embed/36ZKctUyRiU?si=PJcG9293V31fKK98" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
-                <h4 className="contact-tag contact-icon">F2F Android/iOS</h4>
 
                 <div className="experience-text ml-20">
                     <ul>
@@ -67,7 +68,7 @@ const f2fAndroidiOS: ExperienceItem[] = [
                         <li>Ported pc logics for mobile devices.</li>
                     </ul>
                 </div>
-            </div>
+            </div >
         ),
 
     },
@@ -79,11 +80,11 @@ const ununounced: ExperienceItem[] = [
         summary: (
             <div style={{ marginTop: "20px" }}>
 
+                <h4 className="f2f-heading-h4">Ununounced</h4>
                 <div className="fears-to-fathom-poster">
                     <img src="/ununounced.png" alt="fears-to-fathom" />
-                    <img src="/ununounced.png" alt="fears-to-fathom" />
+                    {/* <img src="/ununounced.png" alt="fears-to-fathom" /> */}
                 </div>
-                <h4 className="contact-tag contact-icon">Ununounced</h4>
 
                 <div className="experience-text ml-20">
                     <ul>
@@ -105,7 +106,7 @@ const StudioXYZ = () => {
     return (
 
         <main style={{ paddingBottom: "40px" }}>
-            <section id="f2f-pc">
+            <section className="experience-hero" id="f2f-pc">
                 <SectionHeading title="Fears to Fathom - Scratch Creek" />
             </section>
             <section className="experience-hero">
@@ -116,7 +117,7 @@ const StudioXYZ = () => {
                 </div>
             </section>
 
-            <section id="f2f-mobile">
+            <section className="experience-hero" id="f2f-mobile">
                 <SectionHeading title="F2F Android/iOS" />
             </section>
             <section className="experience-hero">
@@ -128,7 +129,7 @@ const StudioXYZ = () => {
             </section>
 
 
-            <section id="f2f-unannounced">
+            <section className="experience-hero" id="f2f-unannounced">
                 <SectionHeading title="ununounced" />
             </section>
             <section className="experience-hero">

@@ -272,4 +272,8 @@
         width: 48px;
         height: 48px;
     }
+
+    .fears-to-fathom-poster iframe {
+        height: 170px;
+    }
 }

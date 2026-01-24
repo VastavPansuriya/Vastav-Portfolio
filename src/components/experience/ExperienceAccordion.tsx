@@ -19,12 +19,12 @@ const ExperienceAccordion = ({ data }: Props) => {
         <div className={`experience-card ${open ? "open" : ""}`}>
             {/* HEADER */}
             <div
-                className={`experience-header ${hasExpandableContent ? "clickable" : ""}`}
+                className={`experience-header  ${hasExpandableContent ? "clickable" : ""}`}
                 onClick={hasExpandableContent && !isPersonal ? toggleAccordion : undefined}
                 role={!isPersonal && hasExpandableContent ? "button" : undefined}
                 aria-expanded={open}
             >
-                <div className="header-left">
+                <div className="header-left mt-16">
                     {data.logo && (
                         <div className="company-logo">
                             <img src={data.logo} alt={`${data.company} logo`} />
@@ -38,7 +38,7 @@ const ExperienceAccordion = ({ data }: Props) => {
                 </div>
 
                 {!isPersonal && data.start && data.end && (
-                    <div className="header-right">
+                    <div className="header-right mt-16">
                         <div className="experience-dates">
                             <span className="date-start">Started: {data.start},</span>
                             <span className="date-end">Ended: {data.end}</span>
@@ -71,6 +71,7 @@ const ExperienceAccordion = ({ data }: Props) => {
             {/* EXPANDED CONTENT (ONLY WHEN OPEN) */}
             {(isPersonal || open) && (
                 <div className="experience-content">
+                    <hr />
                     <div className="experience-content-inner">
                         {data.projects && data.projects.length > 0 && (
                             <div className="project-grid">

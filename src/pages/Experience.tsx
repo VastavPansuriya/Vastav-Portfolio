@@ -1,6 +1,7 @@
 import SectionHeading from "../components/ui/SectionHeading";
 import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
+import { Link } from "react-router-dom";
 
 const experienceData: ExperienceItem[] = [
     {
@@ -56,37 +57,37 @@ const ithreesimulations: ExperienceItem[] = [
 
                 <div className="experience-text">
                     <h4 className="contact-tag contact-icon">Replay System</h4>
-                    <ul>
-                        <li>
-                            From <span className="highlight">JSON</span> recorded data to executing a recorded
-                            video file with audio using <span className="highlight">ffmpeg.</span>
-                        </li>
-                        <li><span className="highlight">Replay System :</span></li>
-                        <ul style={{ marginLeft: "20px" }}>
+                    <div className="pl-15">
+                        <ul>
                             <li>
-                                Developed an <span className="highlight">interview simulation</span> feature that records user progress
-                                through <strong>JSON</strong> data analysis.
+                                From <span className="highlight">JSON</span> recorded data to executing a recorded
+                                video file with audio using <span className="highlight">ffmpeg.</span>
+                            </li>
+                            <li><span className="highlight">Replay System :</span></li>
+                            <ul style={{ marginLeft: "20px" }}>
+                                <li>
+                                    Developed an <span className="highlight">interview simulation</span> feature that records user progress
+                                    through <strong>JSON</strong> data analysis.
+                                </li>
+                                <li>
+                                    Built a system that <span className="highlight">reads JSON data and simulates the exact same interview.</span>
+                                </li>
+                                <li>
+                                    Added session video export using <span className="highlight">ffmpeg.</span>
+                                </li>
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span className="highlight">VR Medical Resuscitation:</span> Improved CPR mechanics, AED usage simulations, rescue breathing,
+                                and tactile feedback accuracy for virtual medical training.
                             </li>
                             <li>
-                                Built a system that <span className="highlight">reads JSON data and simulates the exact same interview.</span>
-                            </li>
-                            <li>
-                                Added session video export using <span className="highlight">ffmpeg.</span>
+                                <span className="highlight">Quality Assurance</span> Optimised systems based on user feedback, fixed technical issues,
+                                and implemented analytics for user performance tracking.
                             </li>
                         </ul>
-                    </ul>
-                    <ul>
-                        <li>
-                            <span className="highlight">VR Medical Resuscitation:</span> Improved CPR mechanics, AED usage simulations, rescue breathing,
-                            and tactile feedback accuracy for virtual medical training.
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <span className="highlight">Quality Assurance</span> Optimised systems based on user feedback, fixed technical issues,
-                            and implemented analytics for user performance tracking.
-                        </li>
-                    </ul>
+                    </div>
                 </div>
             </div>
         ),
@@ -105,7 +106,7 @@ const marqueesolution: ExperienceItem[] = [
         summary: (
             <div style={{ marginTop: "20px" }}>
 
-                <div className="experience-text">
+                <div className="experience-text pl-15">
                     <ul>
                         <li>Developed and published <span className="highlight">5 mobile games</span> from concept to release.</li>
 
@@ -174,12 +175,12 @@ const unrealprojects: ExperienceItem[] = [
             <div style={{ marginTop: "20px" }}>
                 <p style={{ marginBottom: "20px" }}>I started learning Unreal Engine a few months ago (January '25) and have immersed myself in its intricacies. Unreal Engine stands out as the best tool I've worked with.</p>
 
-                <div className="experience-text">
+                <div className="experience-text pl-15">
                     <ul>
-                        <li><a href="https://youtu.be/dwh7H3VNuIw"><span className="highlight">Project Kix:</span></a>This was my second learning project. It involved Blueprint Classes, Animation Blueprint (ABP), Enhanced Input, and Basic UI.</li>
-                        <li><a href="https://youtu.be/F858K5fkPn8"><span className="highlight">Platformer 2D</span></a> I explored Behaviour Trees for Enemy AI, Paper 2D, Niagara Effects, and other fundamental concepts.</li>
-                        <li><a href="https://youtu.be/LB61xenId-M"><span className="highlight">Multiplayer CO-OP</span></a> Using both CPP and Blueprints, I developed a small project enabling interaction between two players and items within the game world.</li>
-                        <li><a href="https://youtu.be/Yel6CGmNm1c"><span className="highlight">User Interface</span></a> This project covered Canvases, Layout Boxes, Groups, Images, Events, UI Animations, and other essential UI elements.</li>
+                        <li><Link to="https://youtu.be/dwh7H3VNuIw" target="_blank"><span className="highlight"><u>Project Kix:</u></span></Link> This was my second learning project. It involved Blueprint Classes, Animation Blueprint (ABP), Enhanced Input, and Basic UI.</li>
+                        <li><Link to="https://youtu.be/F858K5fkPn8" target="_blank"><span className="highlight"><u>Platformer 2D</u></span></Link> I explored Behaviour Trees for Enemy AI, Paper 2D, Niagara Effects, and other fundamental concepts.</li>
+                        <li><Link to="https://youtu.be/LB61xenId-M" target="_blank"><span className="highlight"><u>Multiplayer CO-OP</u></span></Link> Using both CPP and Blueprints, I developed a small project enabling interaction between two players and items within the game world.</li>
+                        <li><Link to="https://youtu.be/Yel6CGmNm1c" target="_blank"><span className="highlight"><u>User Interface</u></span></Link> This project covered Canvases, Layout Boxes, Groups, Images, Events, UI Animations, and other essential UI elements.</li>
                     </ul>
                 </div>
             </div>
@@ -192,7 +193,7 @@ const Experience = () => {
     return (
 
         <main style={{ paddingBottom: "40px" }}>
-            <section id="experience">
+            <section className="experience-hero" id="experience">
                 <SectionHeading title="Work experience" />
             </section>
             <section className="experience-hero">
@@ -216,7 +217,7 @@ const Experience = () => {
                     ))}
                 </div>
             </section>
-            <section id="experience">
+            <section className="experience-hero" id="experience">
                 <SectionHeading title="PERSONAL PROJECTS" />
             </section>
             <section className="experience-hero">
