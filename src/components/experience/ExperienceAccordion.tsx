@@ -70,8 +70,8 @@ const ExperienceAccordion = ({ data }: Props) => {
 
             {/* EXPANDED CONTENT (ONLY WHEN OPEN) */}
             {(isPersonal || open) && (
-                <div className="experience-content">
-                    <hr />
+                <div className={`experience-content ${isPersonal ? "no-border" : ""
+                    }`}>
                     <div className="experience-content-inner">
                         {data.projects && data.projects.length > 0 && (
                             <div className="project-grid">

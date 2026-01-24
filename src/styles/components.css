@@ -553,7 +553,7 @@
 .experience-content {
     /* margin-top: 20px; */
     padding-top: 16px;
-    /* border-top: 1px solid var(--accent); */
+    border-top: 1px solid var(--accent);
     overflow: hidden;
     max-height: 0;
     display: grid;
@@ -792,4 +792,10 @@
 .f2f-heading-h4 {
     font-size: 19px;
     margin-bottom: 10px;
+}
+
+
+.experience-content.no-border {
+  border-top: none;
+  padding-top: 0;
 }
