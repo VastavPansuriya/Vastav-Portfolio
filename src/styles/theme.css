@@ -1,59 +1,32 @@
-/* :root {
-    --bg: #0F0D17;
-    --surface: #19162A;
-
-    --accent: #A78BFA;
-    --accent-soft: #C4B5FD;
-
-    --text: #F4F4F5;
-    --text-muted: #A1A1AA;
-
-    --border: #2A2545;
-
-    --font-ui: "Inter", system-ui, -apple-system, sans-serif;
-    --font-mono: "JetBrains Mono", monospace;
-} */
-
-
 :root {
     /* Base */
-    --background: #0E2430;
-    /* deep blue/teal background */
-    --surface: #122E3B;
-    /* cards / panels */
-    --surface-soft: #163645;
+    --background: #f8f9fa;
+    --surface: #ffffff;
+    --surface-soft: #e9ecef;
 
-    /* Accent (FEEL orange) */
-    --accent: #FF4D00;
-    /* primary orange */
-    --accent-soft: #FFB703;
-    /* yellow accent */
+    /* Accent colors from palette */
+    --accent: #495057;
+    --accent-soft: #6c757d;
 
     /* Text */
-    --text: #F8FAFC;
-    /* main text */
-    --text-muted: #B6C2CC;
-    /* secondary text */
+    --text: #212529;
+    --text-muted: #6c757d;
 
     /* Borders */
-    --border: #1F4456;
+    --border: #ced4da;
 
     /* Utility */
-    --highlight: #00C2FF;
-    /* links / engine names */
+    --highlight: #343a40;
 
-    --font-ui: "Inter", system-ui, -apple-system, sans-serif;
-    --font-mono: "JetBrains Mono", monospace;
+    /* Fonts - Clean and readable */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    --font-secondary: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    
+    /* Extended color palette */
+    --bgColor: #f8f9fa;
+    --bgDarkColor: #212529;
+    --highlightColor: #495057;
+    --textColor: #212529;
+    --headerColor: #ffffff;
 }
-
-
-
-/* :root {
-    --background: #0B0F0C;
-    --surface: #121915;
-    --accent: #4ADE80;
-    --accent-soft: #86EFAC;
-    --text: #ECFDF5;
-    --text-muted: #9CA3AF;
-    --border: #1F2E24;
-} */

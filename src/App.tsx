@@ -8,7 +8,6 @@ import MainLayout from "./components/layout/MainLayout";
 import StudioXYZ from "./pages/StudioXYZ";
 
 function App() {
-
   return (
     <div className="app-background">
       <Routes>
@@ -17,9 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
-
           <Route path="/experience/studio-xyz" element={<StudioXYZ />} />
-
         </Route>
 
         {/* 404 */}

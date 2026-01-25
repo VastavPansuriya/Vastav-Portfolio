@@ -11,26 +11,25 @@ const experienceData: ExperienceItem[] = [
         role: "Game Developer",
         start: "01-04-2024",
         end: "01-08-2026",
-        summary:
-            "Worked on gameplay systems, performance optimization, and tooling for large-scale projects.",
+        summary: "Worked on gameplay systems, performance optimization, and tooling for large-scale projects.",
         projects: [
             {
                 id: "1",
                 title: "Fears to Fathom - Scratch Creek",
                 image: "/fears-to-fathom.jpg",
-                link: "/experience/studio-xyz",
+                link: "/experience/studio-xyz#f2f-pc",
             },
             {
                 id: "2",
                 title: "F2F Android/iOS",
                 image: "/f2f.png",
-                link: "/experience/studio-xyz",
+                link: "/experience/studio-xyz#f2f-mobile",
             },
             {
                 id: "3",
-                title: "Ununounced",
+                title: "Unannounced",
                 image: "/ununounced.webp",
-                link: "/experience/studio-xyz",
+                link: "/experience/studio-xyz#f2f-unannounced",
             },
         ],
     },
@@ -56,7 +55,7 @@ const ithreesimulations: ExperienceItem[] = [
                 with {" "}<span className="highlight">c++</span>{" "} basics.
 
                 <div className="experience-text">
-                    <h4 className="contact-tag contact-icon">Replay System</h4>
+                    <h4 className="experience-section-heading">Replay System</h4>
                     <div className="pl-15">
                         <ul>
                             <li>
@@ -91,7 +90,6 @@ const ithreesimulations: ExperienceItem[] = [
                 </div>
             </div>
         ),
-
     },
 ];
 
@@ -105,27 +103,27 @@ const marqueesolution: ExperienceItem[] = [
         end: "30-04-2024",
         summary: (
             <div style={{ marginTop: "20px" }}>
-
                 <div className="experience-text pl-15">
                     <ul>
                         <li>Developed and published <span className="highlight">5 mobile games</span> from concept to release.</li>
 
                         <li>I oversaw research, game development, quality assurance, Google Ads, analytics, and publishing for both Android and iOS platforms.</li>
                         <li><span className="highlight">Titles include:</span> Keyboard Clicker, Cannon Guardian, Ball Sort 3D, Stack Build, Crowd Clash.</li>
-                        <li>Boll Short 3D: <span className="highlight">Crafted 100+ levels</span> levels using modular level generation with <span className="highlight">scriptable objects.</span>  </li>
-                        <li>Keyboard Clicker: Contains a <span className="highlight"> Modular UI based on data.</span></li>
+                        <li>Ball Sort 3D: <span className="highlight">Crafted 100+ levels</span> levels using modular level generation with <span className="highlight">scriptable objects.</span>  </li>
+                        <li>Keyboard Clicker: Contains a <span className="highlight">Modular UI based on data.</span></li>
                         <li>Stack Build: Added a polished environment and game feel fundamentals </li>
                     </ul>
                 </div>
             </div>
         ),
-
     },
 ];
 
 const personalprojects: ExperienceItem[] = [
     {
         type: "personal",
+        company: "Personal Projects",
+        summary: "A collection of personal game development projects",
         projects: [
             {
                 id: "KitchenChaos",
@@ -185,13 +183,11 @@ const unrealprojects: ExperienceItem[] = [
                 </div>
             </div>
         ),
-
     },
 ];
 
 const Experience = () => {
     return (
-
         <main style={{ paddingBottom: "40px" }}>
             <section className="experience-hero" id="experience">
                 <SectionHeading title="Work experience" />

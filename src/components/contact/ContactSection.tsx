@@ -23,13 +23,13 @@ const ContactSection = () => {
 
                 {/* LEFT */}
                 <div className="contact-left">
-                    <span className="contact-tag">Contact</span>
+                    {/* <span className="contact-tag">Contact</span> */}
 
                     <h2 className="contact-title">Get in touch</h2>
 
                     <p className="contact-desc">
                         Have a project, question, or idea?
-                        Let’s build something clean, performant, and meaningful.
+                        Let's build something clean, performant, and meaningful.
                     </p>
 
                     <div className="contact-cards">
@@ -53,7 +53,6 @@ const ContactSection = () => {
                                 <p>Vastav Pansuriya</p>
                             </div>
                         </a>
-
 
                         <a href="https://vastav.itch.io/" target="_blank">
                             <div className="contact-card">
@@ -89,9 +88,7 @@ const ContactSection = () => {
 
                         <button type="submit">Send message</button>
                     </form>
-
                 </div>
-
             </div>
 
             {/* soft fade into footer */}

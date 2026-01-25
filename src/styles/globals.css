@@ -4,11 +4,20 @@
     box-sizing: border-box;
 }
 
+/* Base typography */
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: var(--font-mono);
-    line-height: 1.7;
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -0.01em;
 }
 
 html,
@@ -16,6 +25,65 @@ body {
     height: auto;
     min-height: 100%;
     overflow-y: auto;
+}
+
+/* Headers - Consistent styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75em;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+/* Paragraphs and text elements */
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25em;
+    color: var(--text);
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+.highlight {
+    color: var(--highlight);
+    font-weight: 600;
+    background-color: rgba(52, 58, 64, 0.1);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+}
+
+/* Links */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--highlight);
 }
 
 /* GLOBAL UI POLISH */
@@ -34,56 +102,43 @@ body {
     cursor: default;
 }
 
-
-a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--accent-soft);
-}
-
 body.sidebar-open {
     overflow: hidden;
 }
-
 
 /* GLOBAL BACKGROUND */
 .app-background {
     min-height: 100svh;
     width: 100%;
-    background-image:
-        linear-gradient(rgba(15, 13, 23, 1.9),
-            rgba(15, 13, 23, 0.90)),
-        url("/bg2.png");
-
+    background-color: var(--bgColor);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-p,
-.long-text,
-.description {
-    font-family: var(--font-ui);
-    line-height: 1.7;
+/* Utility classes for fonts */
+.text-primary {
+    font-family: var(--font-primary);
 }
 
-.text-ui {
-    font-family: var(--font-ui);
+.text-secondary {
+    font-family: var(--font-secondary);
 }
 
 .text-mono {
     font-family: var(--font-mono);
 }
 
-.highlight {
-    color: var(--accent-soft);
-    font-weight: 500;
+.text-small {
+    font-size: 0.875rem;
 }
 
+.text-muted {
+    color: var(--text-muted);
+}
+
+/* Layout */
 .app-root {
     min-height: 100vh;
     display: flex;

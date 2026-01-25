@@ -16,34 +16,38 @@ const ExperienceAccordion = ({ data }: Props) => {
         (data.projects && data.projects.length > 0) || !!data.details;
 
     return (
-        <div className={`experience-card ${open ? "open" : ""}`}>
+        <div className={`experience-card ${open ? "open" : ""} ${isPersonal ? "personal" : ""}`}>
             {/* HEADER */}
             <div
-                className={`experience-header  ${hasExpandableContent ? "clickable" : ""}`}
+                className={`experience-header ${hasExpandableContent ? "clickable" : ""}`}
                 onClick={hasExpandableContent && !isPersonal ? toggleAccordion : undefined}
                 role={!isPersonal && hasExpandableContent ? "button" : undefined}
                 aria-expanded={open}
             >
-                <div className="header-left">
-                    {data.logo && (
-                        <div className="company-logo">
-                            <img src={data.logo} alt={`${data.company} logo`} />
-                        </div>
-                    )}
+                {!isPersonal && (
+                    <>
+                        <div className="header-left">
+                            {data.logo && (
+                                <div className="company-logo">
+                                    <img src={data.logo} alt={`${data.company} logo`} />
+                                </div>
+                            )}
 
-                    <div className="company-info">
-                        <h3>{data.company}</h3>
-                        {data.role && <p className="role">{data.role}</p>}
-                    </div>
-                </div>
-
-                {!isPersonal && data.start && data.end && (
-                    <div className="header-right">
-                        <div className="experience-dates">
-                            <span className="date-start">Started: {data.start},</span>
-                            <span className="date-end">Ended: {data.end}</span>
+                            <div className="company-info">
+                                <h3>{data.company}</h3>
+                                {data.role && <p className="role">{data.role}</p>}
+                            </div>
                         </div>
-                    </div>
+
+                        {!isPersonal && data.start && data.end && (
+                            <div className="header-right">
+                                <div className="experience-dates">
+                                    <span className="date-start">Started: {data.start},</span>
+                                    <span className="date-end">Ended: {data.end}</span>
+                                </div>
+                            </div>
+                        )}
+                    </>
                 )}
             </div>
 
@@ -70,8 +74,7 @@ const ExperienceAccordion = ({ data }: Props) => {
 
             {/* EXPANDED CONTENT (ONLY WHEN OPEN) */}
             {(isPersonal || open) && (
-                <div className={`experience-content ${isPersonal ? "no-border" : ""
-                    }`}>
+                <div className={`experience-content ${isPersonal ? "no-border" : ""}`}>
                     <div className="experience-content-inner">
                         {data.projects && data.projects.length > 0 && (
                             <div className="project-grid">
