@@ -3,25 +3,12 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-
         <main>
             <section className="home hero" >
                 <div className="home-card">
-                    {/* <div className="home-grid">
-                        <div className="home-left">
-                            <img
-                                src="/avatar.png"
-                                alt="Vastav avatar"
-                                className="home-avatar"
-                            />
-                        </div>
-                    </div> */}
-
-
-                    {/* RIGHT – Text */}
                     <div className="home-right">
                         <h1 style={{ color: "var(--accent)" }}>
-                            Hey! I’m Vastav,
+                            Hey! I'm Vastav,
                         </h1>
                         <p>
                             I'm VASTA, a professional with almost 3 years experience in Game
@@ -43,15 +30,14 @@ const Home = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"><GithubLogoIcon size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                            <Link className="resume-pdf contact-icon" to="/about"><CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
-
+                            <Link className="resume-pdf contact-icon" to="/experience">
+                                <CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} />
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-        </main >
+        </main>
     );
 };
 

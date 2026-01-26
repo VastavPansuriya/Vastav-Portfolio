@@ -112,7 +112,7 @@ const unannounced: ExperienceItem[] = [
     },
 ];
 
-const StudioXYZ = () => {
+const RayllStudio = () => {
     return (
         <main style={{ paddingBottom: "40px" }} className="studio-xyz-section">
             <section className="experience-hero" id="f2f-pc">
@@ -153,4 +153,4 @@ const StudioXYZ = () => {
     );
 };
 
-export default StudioXYZ;
+export default RayllStudio;

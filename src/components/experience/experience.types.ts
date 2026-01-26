@@ -1,10 +1,10 @@
-
-
 export type ExperienceProject = {
     id: string;
     title: string;
     image: string;
     link: string;
+    role?: string;
+    skills?: string[];
 };
 
 export type ExperienceItem = {

@@ -5,7 +5,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import MainLayout from "./components/layout/MainLayout";
-import StudioXYZ from "./pages/StudioXYZ";
+import RayllStudio from "./pages/RayllStudio";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/experience/studio-xyz" element={<StudioXYZ />} />
+          <Route path="/experience/studio-xyz" element={<RayllStudio />} />
         </Route>
 
         {/* 404 */}

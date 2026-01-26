@@ -1,237 +1,299 @@
 import SectionHeading from "../components/ui/SectionHeading";
-import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
 import { Link } from "react-router-dom";
 
-const experienceData: ExperienceItem[] = [
-    {
-        type: "work",
-        logo: "/rayll_studios_logo.jpg",
-        company: "Studio XYZ",
+// Project card component for the grid
+const ProjectCard = ({ 
+  image, 
+  title, 
+  role, 
+  skills,
+  link,
+  company 
+}: { 
+  image: string; 
+  title: string; 
+  role: string; 
+  skills: string[];
+  link: string;
+  company?: string;
+}) => {
+  const handleClick = (e: React.MouseEvent) => {
+    // For RayllStudio projects, navigate to the RayllStudio page with the specific section
+    if (company === "RayllStudio") {
+      e.preventDefault();
+      // Store the section ID to scroll to after navigation
+      const sectionId = link.split('#')[1];
+      if (sectionId) {
+        localStorage.setItem('scrollToSection', sectionId);
+      }
+      // Navigate to the RayllStudio page
+      window.location.href = link;
+    }
+  };
+
+  return (
+    <Link 
+      to={link}
+      className="experience-grid-card"
+      onClick={handleClick}
+    >
+      <div className="card-image-container">
+        <img src={image} alt={title} className="card-image" />
+      </div>
+      <div className="card-content">
+        <h4 className="card-title">{title}</h4>
+        <p className="card-role">{role}</p>
+        <div className="card-skills">
+          {skills.map((skill, index) => (
+            <span key={index} className="skill-tag">{skill}</span>
+          ))}
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+// Company section component
+const CompanySection = ({ 
+  name, 
+  logo, 
+  projects 
+}: { 
+  name: string; 
+  logo?: string; 
+  projects: Array<{
+    id: string;
+    title: string;
+    image: string;
+    link: string;
+    role: string;
+    skills: string[];
+  }>;
+}) => {
+  return (
+    <div id={name.toLowerCase().replace(/\s+/g, '-')} className="company-section">
+      <div className="company-header">
+        {logo && <img src={logo} alt={`${name} logo`} className="company-logo" />}
+        <h3 className="company-name">{name}</h3>
+      </div>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <ProjectCard 
+            key={project.id}
+            {...project}
+            company={name}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Work Experience Data
+const workCompanies = [
+  {
+    name: "Rayll Studio",
+    logo: "/rayll_studios_logo.jpg",
+    projects: [
+      {
+        id: "1",
+        title: "Fears to Fathom - Scratch Creek",
+        image: "/Gifs/RayllStudioGif.gif",
+        link: "/experience/RayllStudio#f2f-pc",
         role: "Game Developer",
-        start: "01-04-2024",
-        end: "01-08-2026",
-        summary: "Worked on gameplay systems, performance optimization, and tooling for large-scale projects.",
-        projects: [
-            {
-                id: "1",
-                title: "Fears to Fathom - Scratch Creek",
-                image: "/fears-to-fathom.jpg",
-                link: "/experience/studio-xyz#f2f-pc",
-            },
-            {
-                id: "2",
-                title: "F2F Android/iOS",
-                image: "/f2f.png",
-                link: "/experience/studio-xyz#f2f-mobile",
-            },
-            {
-                id: "3",
-                title: "Unannounced",
-                image: "/ununounced.webp",
-                link: "/experience/studio-xyz#f2f-unannounced",
-            },
-        ],
-    },
-];
-
-const ithreesimulations: ExperienceItem[] = [
-    {
-        type: "work",
-        logo: "/i3_simulations_logo.jpg",
-        company: "i3 Simulations",
+        skills: ["Unity", "C#", "Multiplayer", "Design Patterns", "Ststem Architecture", "Editor Scripting"]
+      },
+      {
+        id: "2",
+        title: "F2F Android/iOS",
+        image: "/Gifs/EP2Gif.gif",
+        link: "/experience/RayllStudio#f2f-mobile",
+        role: "Mobile Developer",
+        skills: ["Unity", "C#", "Mobile Optimization", "Performance", "UI/UX"]
+      },
+      {
+        id: "3",
+        title: "Unannounced Project",
+        image: "/Gifs/Unannounced.gif",
+        link: "/experience/RayllStudio#f2f-unannounced",
+        role: "Gameplay Programmer",
+        skills: ["Unity", "C#", "Scriptable Objects", "System Design", "Animation"]
+      }
+    ]
+  },
+  {
+    name: "i3 Simulations",
+    logo: "/i3_simulations_logo.jpg",
+    projects: [
+      {
+        id: "4",
+        title: "VR Simulations",
+        image: "/Gifs/i3SimGif.gif",
+        link: "#i3-simulations",
         role: "Game Developer",
-        start: "01-07-2023",
-        end: "30-04-2024",
-        summary: (
-            <div style={{ marginTop: "20px" }}>
-                The i3 simulation may have been small, but it was an important experience for me.
-                Working with the existing codebase was both challenging and rewarding.
-                I focused on improving the system, adding new features, and fixing bugs.
-                Throughout this process, I adapted{" "}
-                <span className="highlight">
-                    Unreal Engine
-                </span>{" "}
-                with {" "}<span className="highlight">c++</span>{" "} basics.
-
-                <div className="experience-text">
-                    <h4 className="experience-section-heading">Replay System</h4>
-                    <div className="pl-15">
-                        <ul>
-                            <li>
-                                From <span className="highlight">JSON</span> recorded data to executing a recorded
-                                video file with audio using <span className="highlight">ffmpeg.</span>
-                            </li>
-                            <li><span className="highlight">Replay System :</span></li>
-                            <ul style={{ marginLeft: "20px" }}>
-                                <li>
-                                    Developed an <span className="highlight">interview simulation</span> feature that records user progress
-                                    through <strong>JSON</strong> data analysis.
-                                </li>
-                                <li>
-                                    Built a system that <span className="highlight">reads JSON data and simulates the exact same interview.</span>
-                                </li>
-                                <li>
-                                    Added session video export using <span className="highlight">ffmpeg.</span>
-                                </li>
-                            </ul>
-                        </ul>
-                        <ul>
-                            <li>
-                                <span className="highlight">VR Medical Resuscitation:</span> Improved CPR mechanics, AED usage simulations, rescue breathing,
-                                and tactile feedback accuracy for virtual medical training.
-                            </li>
-                            <li>
-                                <span className="highlight">Quality Assurance</span> Optimised systems based on user feedback, fixed technical issues,
-                                and implemented analytics for user performance tracking.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        ),
-    },
-];
-
-const marqueesolution: ExperienceItem[] = [
-    {
-        type: "work",
-        logo: "/marqueesolution_logo.jpg",
-        company: "Marquee Solution",
+        skills: ["Unreal Engine", "C++", "VR", "JSON", "FFmpeg", "Replay Systems"]
+      }
+    ]
+  },
+  {
+    name: "Marquee Solution",
+    logo: "/marqueesolution_logo.jpg",
+    projects: [
+      {
+        id: "7",
+        title: "Keyboard Clicker",
+        image: "/Gifs/KeyboardClicker.gif",
+        link: "#marquee-solution",
+        role: "Full Stack Developer",
+        skills: ["Unity", "C#", "Mobile", "Google Ads", "Analytics", "UI/UX"]
+      },
+      {
+        id: "8",
+        title: "Cannon Guardian",
+        image: "/Gifs/CannonGardian.gif",
+        link: "#marquee-solution",
         role: "Game Developer",
-        start: "01-07-2023",
-        end: "30-04-2024",
-        summary: (
-            <div style={{ marginTop: "20px" }}>
-                <div className="experience-text pl-15">
-                    <ul>
-                        <li>Developed and published <span className="highlight">5 mobile games</span> from concept to release.</li>
-
-                        <li>I oversaw research, game development, quality assurance, Google Ads, analytics, and publishing for both Android and iOS platforms.</li>
-                        <li><span className="highlight">Titles include:</span> Keyboard Clicker, Cannon Guardian, Ball Sort 3D, Stack Build, Crowd Clash.</li>
-                        <li>Ball Sort 3D: <span className="highlight">Crafted 100+ levels</span> levels using modular level generation with <span className="highlight">scriptable objects.</span>  </li>
-                        <li>Keyboard Clicker: Contains a <span className="highlight">Modular UI based on data.</span></li>
-                        <li>Stack Build: Added a polished environment and game feel fundamentals </li>
-                    </ul>
-                </div>
-            </div>
-        ),
-    },
+        skills: ["Unity", "C#", "Mobile", "Gameplay", "Level Design"]
+      },
+      {
+        id: "9",
+        title: "Ball Sort 3D",
+        image: "/Gifs/BallSorting3d.gif",
+        link: "#marquee-solution",
+        role: "Game Developer",
+        skills: ["Unity", "C#", "Scriptable Objects", "Level Design", "Puzzle Mechanics"]
+      },
+      {
+        id: "10",
+        title: "Stack Build",
+        image: "/Gifs/StackBuild.gif",
+        link: "#marquee-solution",
+        role: "Game Developer",
+        skills: ["Unity", "C#", "3D Physics", "Environment", "Game Feel"]
+      },
+      {
+        id: "11",
+        title: "Crowd Clash",
+        image: "/Gifs/CrowdClash.gif",
+        link: "#marquee-solution",
+        role: "Game Developer",
+        skills: ["Unity", "C#", "Crowd Simulation", "Mobile", "Multiplayer"]
+      }
+    ]
+  }
 ];
 
-const personalprojects: ExperienceItem[] = [
+// Personal Projects Data
+const personalProjects = [
     {
-        type: "personal",
-        company: "Personal Projects",
-        summary: "A collection of personal game development projects",
-        projects: [
-            {
-                id: "KitchenChaos",
-                title: "Kitchen Chaos",
-                image: "/kitchenchaos.png",
-                link: "/kitchenchaos"
-            },
-            {
-                id: "PawnGambit",
-                title: "Pawn Gambit",
-                image: "/pawngambit.png",
-                link: "/pawngambit"
-            },
-            {
-                id: "ZeroEffort",
-                title: "Zero Effort",
-                image: "/zeroeffort.png",
-                link: "/zeroeffort"
-            },
-            {
-                id: "SmileSnake",
-                title: "Smile Snake",
-                image: "/smilesnake.png",
-                link: "/smilesnake"
-            },
-            {
-                id: "PhotonPhobia",
-                title: "Photon Phobia",
-                image: "/photonphobia.png",
-                link: "/photonphobia"
-            },
-            {
-                id: "Hurrr",
-                title: "Hurrr",
-                image: "/hurrr.png",
-                link: "/hurrr"
-            },
-        ]
+      id: "13",
+      title: "Pawn Gambit",
+      image: "/pawngambit.png",
+      link: "/pawngambit",
+      role: "Solo Developer",
+      skills: ["Unity", "C#", "Strategy", "AI", "Board Games"]
     },
+    {
+      id: "14",
+      title: "Zero Effort",
+      image: "/zeroeffort.png",
+      link: "/zeroeffort",
+      role: "Solo Developer",
+      skills: ["Unity", "C#", "Minimalist", "Mobile", "Casual"]
+    },
+    {
+        id: "17",
+        title: "Hurrr",
+        image: "/hurrr.png",
+        link: "/hurrr",
+        role: "Solo Developer",
+        skills: ["Unity", "C#", "Experimental", "Sound", "Interaction"]
+    },
+    
 ];
 
-const unrealprojects: ExperienceItem[] = [
-    {
-        type: "work",
-        company: "Unreal Projects",
-        summary: (
-            <div style={{ marginTop: "20px" }}>
-                <p style={{ marginBottom: "20px" }}>I started learning Unreal Engine a few months ago (January '25) and have immersed myself in its intricacies. Unreal Engine stands out as the best tool I've worked with.</p>
-
-                <div className="experience-text pl-15">
-                    <ul>
-                        <li><Link to="https://youtu.be/dwh7H3VNuIw" target="_blank"><span className="highlight"><u>Project Kix:</u></span></Link> This was my second learning project. It involved Blueprint Classes, Animation Blueprint (ABP), Enhanced Input, and Basic UI.</li>
-                        <li><Link to="https://youtu.be/F858K5fkPn8" target="_blank"><span className="highlight"><u>Platformer 2D</u></span></Link> I explored Behaviour Trees for Enemy AI, Paper 2D, Niagara Effects, and other fundamental concepts.</li>
-                        <li><Link to="https://youtu.be/LB61xenId-M" target="_blank"><span className="highlight"><u>Multiplayer CO-OP</u></span></Link> Using both CPP and Blueprints, I developed a small project enabling interaction between two players and items within the game world.</li>
-                        <li><Link to="https://youtu.be/Yel6CGmNm1c" target="_blank"><span className="highlight"><u>User Interface</u></span></Link> This project covered Canvases, Layout Boxes, Groups, Images, Events, UI Animations, and other essential UI elements.</li>
-                    </ul>
-                </div>
-            </div>
-        ),
+// Unreal Projects Data
+const learningProjects = [
+  {
+    id: "18",
+    title: "UnrealEngine",
+    image: "/project-kix.jpg",
+    link: "https://youtu.be/dwh7H3VNuIw",
+    role: "Learner",
+    skills: ["Unreal Engine", "Blueprints", "CPP", "Enhanced Input", "UI", "AI", "Paper 2D"]
+  },
+  {
+      id: "15",
+      title: "Smile Snake",
+      image: "/smilesnake.png",
+      link: "/smilesnake",
+      role: "Solo Developer",
+      skills: ["Unity", "C#", "Arcade", "Mobile", "Retro"]
     },
+  {
+    id: "12",
+    title: "Kitchen Chaos",
+    image: "/kitchenchaos.png",
+    link: "/kitchenchaos",
+    role: "Solo Developer",
+    skills: ["Unity", "C#", "Game Design", "UI", "Audio"]
+  },
+  {
+    id: "16",
+    title: "Photon Phobia",
+    image: "/photonphobia.png",
+    link: "/photonphobia",
+    role: "Solo Developer",
+    skills: ["Unity", "C#", "Horror", "Lighting", "Atmosphere"]
+  },
 ];
 
 const Experience = () => {
-    return (
-        <main style={{ paddingBottom: "40px" }}>
-            <section className="experience-hero" id="experience">
-                <SectionHeading title="Work experience" />
-            </section>
-            <section className="experience-hero">
-                <div className="experience-section">
-                    {experienceData.map((item) => (
-                        <ExperienceAccordion key={item.company} data={item} />
-                    ))}
-                </div>
-            </section>
-            <section className="experience-hero">
-                <div className="experience-section">
-                    {ithreesimulations.map((item) => (
-                        <ExperienceAccordion key={item.company} data={item} />
-                    ))}
-                </div>
-            </section>
-            <section className="experience-hero">
-                <div className="experience-section">
-                    {marqueesolution.map((item) => (
-                        <ExperienceAccordion key={item.company} data={item} />
-                    ))}
-                </div>
-            </section>
-            <section className="experience-hero" id="experience">
-                <SectionHeading title="PERSONAL PROJECTS" />
-            </section>
-            <section className="experience-hero">
-                <div className="experience-section">
-                    {personalprojects.map((item) => (
-                        <ExperienceAccordion key={item.company} data={item} />
-                    ))}
-                </div>
-            </section>
-            <section className="experience-hero">
-                <div className="experience-section">
-                    {unrealprojects.map((item) => (
-                        <ExperienceAccordion key={item.company} data={item} />
-                    ))}
-                </div>
-            </section>
-        </main>
-    );
+  return (
+    <main className="experience-page">
+      {/* Work Experience Section */}
+      <section className="experience-section">
+        <SectionHeading title="Work Experience"/>
+        {workCompanies.map((company) => (
+          <CompanySection 
+            key={company.name}
+            name={company.name}
+            logo={company.logo}
+            projects={company.projects}
+          />
+        ))}
+      </section>
+
+      {/* Personal Projects Section */}
+      <section className="experience-section">
+        <SectionHeading title="Personal Projects" />
+        
+        <div className="projects-grid">
+          {personalProjects.map((project) => (
+            <ProjectCard 
+              key={project.id}
+              {...project}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Unreal Projects Section */}
+      <section className="experience-section">
+        <SectionHeading title="Learning and Skills" />
+        
+        <div className="projects-grid">
+          {learningProjects.map((project) => (
+            <ProjectCard 
+              key={project.id}
+              {...project}
+            />
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 };
 
 export default Experience;
