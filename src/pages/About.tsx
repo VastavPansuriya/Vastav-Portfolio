@@ -16,7 +16,7 @@ const About = () => {
                     <p style={{ marginTop: "8px", marginBottom: "15px" }}>
                         A game programmer with nearly <Link to="/experience"><span className="highlight"><u>four years of experience</u></span></Link> in the industry. I started my journey with <span className="highlight">Unity and C#</span>, without prioritising college, and that to build only the required knowledge. Over time, I improved a lot by learning a variety of coding and game development skills, such as Code architecture and principles, Unity engine relevant stuff, third-party tools and API implementations, system design and more.
                     </p>
-                    
+
                     <Link className="resume-pdf" to="/Vastav-Pansuriya.pdf"
                         target="_blank"
                         rel="noopener noreferrer"><ReadCvLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>

@@ -1,5 +1,6 @@
 /* MOBILE + TABLET */
 @media (max-width: 1023px) {
+
     .navbar-links,
     .navbar-cta {
         display: none;
