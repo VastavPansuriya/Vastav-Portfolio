@@ -300,3 +300,29 @@
         letter-spacing: 0.03em;
     }
 }
+
+/* COMPANY PAGE RESPONSIVE */
+
+@media (max-width: 768px) {
+  .project-video-container {
+    padding-bottom: 56.25%;
+  }
+  
+  .feature-video-container {
+    padding-bottom: 56.25%;
+  }
+}
+
+@media (max-width: 640px) {
+  .company-page-section {
+    padding: 0 0.75rem 1.5rem;
+  }
+  
+  .company-hero {
+    padding: 1.5rem 0 1rem;
+  }
+  
+  .feature-item {
+    padding: 1rem;
+  }
+}

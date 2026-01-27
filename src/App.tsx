@@ -16,7 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/experience/studio-xyz" element={<RayllStudio />} />
+          <Route path="/experience/rayllstudio" element={<RayllStudio />} />
         </Route>
 
         {/* 404 */}

@@ -18,22 +18,35 @@ body {
     line-height: 1.6;
     font-weight: 400;
     letter-spacing: -0.01em;
+    overflow-y: scroll; /* Always show scrollbar space to prevent layout shift */
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
 }
 
 html,
 body {
     height: auto;
     min-height: 100%;
-    overflow-y: auto;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 /* Headers - Consistent styling */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
     font-weight: 600;
     line-height: 1.3;
@@ -67,8 +80,7 @@ p {
     color: var(--text);
 }
 
-strong,
-b {
+strong, b {
     font-weight: 600;
 }
 
@@ -121,6 +133,9 @@ body.sidebar-open {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 /* Utility classes for fonts */
@@ -149,8 +164,24 @@ body.sidebar-open {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .app-content {
     flex: 1;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Ensure all scrollable elements hide scrollbar */
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
 }

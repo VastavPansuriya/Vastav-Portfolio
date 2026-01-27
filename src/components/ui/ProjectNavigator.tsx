@@ -7,17 +7,17 @@ type NavItem = {
 const items: NavItem[] = [
     {
         id: "f2f-pc",
-        image: "/fears-to-fathom.jpg",
+        image: "/Gifs/RayllStudioGif.gif",
         label: "PC",
     },
     {
         id: "f2f-mobile",
-        image: "/f2f.png",
+        image: "/Gifs/EP2Gif.gif",
         label: "Mobile",
     },
     {
         id: "f2f-unannounced",
-        image: "/ununounced.webp",
+        image: "/Gifs/Unannounced.gif",
         label: "Secret",
     },
 ];

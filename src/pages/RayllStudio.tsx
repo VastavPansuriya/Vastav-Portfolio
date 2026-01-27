@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SectionHeading from "../components/ui/SectionHeading";
 import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
@@ -35,19 +36,19 @@ const fearstofathom: ExperienceItem[] = [
             {
                 id: "1",
                 title: "Fears to Fathom - Scratch Creek",
-                image: "/fears-to-fathom.jpg",
+                image: "/Gifs/RayllStudioGif.gif",
                 link: "#f2f-pc",
             },
             {
                 id: "2",
                 title: "F2F Android/iOS",
-                image: "/f2f.png",
+                image: "/Gifs/EP2Gif.gif",
                 link: "#f2f-mobile",
             },
             {
                 id: "3",
                 title: "Unannounced",
-                image: "/ununounced.webp",
+                image: "/Gifs/Unannounced.gif",
                 link: "#f2f-unannounced",
             },
         ],
@@ -113,6 +114,31 @@ const unannounced: ExperienceItem[] = [
 ];
 
 const RayllStudio = () => {
+    // Auto-scroll to the section if coming from Experience page
+    useEffect(() => {
+        const scrollToSection = localStorage.getItem('scrollToSection');
+        if (scrollToSection) {
+            const element = document.getElementById(scrollToSection);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+            localStorage.removeItem('scrollToSection');
+        }
+        
+        // Also check for hash in URL
+        const hash = window.location.hash;
+        if (hash) {
+            const element = document.getElementById(hash.substring(1));
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    }, []);
+
     return (
         <main style={{ paddingBottom: "40px" }} className="studio-xyz-section">
             <section className="experience-hero" id="f2f-pc">
