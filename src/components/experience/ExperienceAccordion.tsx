@@ -16,7 +16,7 @@ const ExperienceAccordion = ({ data }: Props) => {
         (data.projects && data.projects.length > 0) || !!data.details;
 
     return (
-        <div className={`experience-card ${open ? "open" : ""} ${isPersonal ? "personal" : ""}`}>
+        <div className={` ${open ? "open" : ""} ${isPersonal ? "personal" : ""}`}>
             {/* HEADER */}
             <div
                 className={`experience-header ${hasExpandableContent ? "clickable" : ""}`}

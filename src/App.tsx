@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import MainLayout from "./components/layout/MainLayout";
 import RayllStudio from "./pages/RayllStudio";
+import I3Simulation from "./pages/I3Simulation";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/experience/rayllstudio" element={<RayllStudio />} />
+          <Route path="/experience/i3simulation" element={<I3Simulation />} />
         </Route>
 
         {/* 404 */}

@@ -71,31 +71,7 @@ const f2fAndroidiOS: ExperienceItem[] = [
     },
 ];
 
-const unannounced: ExperienceItem[] = [
-    {
-        type: "work",
-        summary: (
-            <div>
-                <h4 className="f2f-heading-h4">Unannounced</h4>
-                <div className="fears-to-fathom-poster">
-                    <img src="/ununounced.png" alt="unannounced project" />
-                </div>
-
-                <div className="experience-text">
-                    <ul>
-                        <li>Created a<span className="highlight"> modular Cooking System using Scriptable Objects </span> to manage a variety of recipe types.</li>
-
-                        <li>Implemented a <span className="highlight"> conflict-free pickup/interaction system</span> with unified input bindings.</li>
-
-                        <li><span className="highlight">Cleaning System</span> with custom shaders.</li>
-                    </ul>
-                </div>
-            </div>
-        ),
-    },
-];
-
-const RayllStudio = () => {
+const I3Simulation = () => {
     // Auto-scroll to the section if coming from Experience page
     useEffect(() => {
         const scrollToSection = localStorage.getItem('scrollToSection');
@@ -147,18 +123,6 @@ const RayllStudio = () => {
                     ))}
                 </div>
             </section>
-
-            <section className="experience-hero" id="f2f-unannounced">
-                <SectionHeading title="Unannounced" />
-            </section>
-            <section className="experience-hero">
-                <div className="experience-section">
-                    {unannounced.map((item, index) => (
-                        <ExperienceAccordion key={index} data={item} />
-                    ))}
-                </div>
-            </section>
-
 
             <section className="experience-hero">
 
@@ -233,4 +197,4 @@ const RayllStudio = () => {
     );
 };
 
-export default RayllStudio;
+export default I3Simulation;

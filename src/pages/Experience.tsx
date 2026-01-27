@@ -131,7 +131,7 @@ const workCompanies = [
                 id: "4",
                 title: "VR Simulations",
                 image: "/Gifs/i3SimGif.gif",
-                link: "#i3-simulations",
+                link: "/experience/i3simulation#f2f-pc",
                 role: "Game Developer",
                 skills: ["Unreal Engine", "C++", "VR", "JSON", "FFmpeg", "Replay Systems"]
             }
