@@ -817,7 +817,7 @@ ol li {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -833,7 +833,7 @@ ol li {
     height: 100%;
     display: flex;
     flex-direction: column;
-    aspect-ratio: 1 / 1;
+
     /* Makes the card square */
 }
 
@@ -868,8 +868,6 @@ ol li {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: 40%;
-    /* Takes up 40% of the square for content */
     justify-content: space-between;
 }
 
@@ -914,14 +912,13 @@ ol li {
 /* Responsive Grid */
 @media (max-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.25rem;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
@@ -951,10 +948,7 @@ ol li {
         gap: 1rem;
     }
 
-    .experience-grid-card {
-        aspect-ratio: 1 / 1;
-        /* Maintain square on mobile */
-    }
+    .experience-grid-card {}
 }
 
 @media (max-width: 480px) {
@@ -962,10 +956,7 @@ ol li {
         grid-template-columns: 1fr;
     }
 
-    .experience-grid-card {
-        aspect-ratio: 1 / 1.1;
-        /* Slightly taller on very small screens */
-    }
+    .experience-grid-card {}
 }
 
 /* Fix for StudioXYZ page sections to be more prominent */

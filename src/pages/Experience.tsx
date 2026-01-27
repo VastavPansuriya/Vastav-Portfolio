@@ -1,5 +1,4 @@
 import SectionHeading from "../components/ui/SectionHeading";
-import type { ExperienceItem } from "../components/experience/experience.types";
 import { Link } from "react-router-dom";
 
 // Project card component for the grid
@@ -35,22 +34,24 @@ const ProjectCard = ({
     return (
         <Link
             to={link}
-            className="experience-grid-card"
             onClick={handleClick}
         >
-            <div className="card-image-container">
-                <img src={image} alt={title} className="card-image" />
-            </div>
-            <div className="card-content">
-                <h4 className="card-title">{title}</h4>
-                <p className="card-role">{role}</p>
-                <div className="card-skills">
-                    {skills.map((skill, index) => (
-                        <span key={index} className="skill-tag">{skill}</span>
-                    ))}
+            <div className="experience-grid-card">
+                <div className="card-image-container">
+                    <img src={image} alt={title} className="card-image" />
+                </div>
+                <div className="card-content">
+                    <h4 className="card-title">{title}</h4>
+                    <p className="card-role">{role}</p>
+                    <div className="card-skills">
+                        {skills.map((skill, index) => (
+                            <span key={index} className="skill-tag">{skill}</span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </Link>
+
     );
 };
 
