@@ -7,10 +7,12 @@ import Experience from "./pages/Experience";
 import MainLayout from "./components/layout/MainLayout";
 import RayllStudio from "./pages/RayllStudio";
 import I3Simulation from "./pages/I3Simulation";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 function App() {
   return (
     <div className="app-background">
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
