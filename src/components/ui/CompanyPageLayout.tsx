@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import SectionHeading from "./SectionHeading";
-import ProjectNavigator from "./ProjectNavigator";
 
 export type Feature = {
   systemName: string;

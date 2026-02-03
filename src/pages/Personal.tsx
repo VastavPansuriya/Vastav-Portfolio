@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import SectionHeading from "../components/ui/SectionHeading";
 import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
 // import ProjectNavigator from "../components/ui/ProjectNavigator";

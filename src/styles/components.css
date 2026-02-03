@@ -782,9 +782,9 @@ ol li {
     margin: 0 auto;
 }
 
-.experience-section {
-    /* margin-bottom: 4rem; */
-}
+/* .experience-section {
+    margin-bottom: 4rem;
+} */
 
 /* Company Section */
 .company-section {
@@ -877,6 +877,7 @@ ol li {
     line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -953,8 +954,6 @@ ol li {
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
-    .experience-grid-card {} 
 }
 
 /* Fix for StudioXYZ page sections to be more prominent */
