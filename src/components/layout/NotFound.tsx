@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NotFound = () => {
     return (
         <section
@@ -29,8 +31,8 @@ const NotFound = () => {
                 </p>
                 
                 <div>
-                    <a
-                        href="/"
+                    <Link
+                        to="/"
                         style={{
                             color: "#495057",
                             textDecoration: "none",
@@ -38,7 +40,7 @@ const NotFound = () => {
                         }}
                     >
                         <span> ← Back to home</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

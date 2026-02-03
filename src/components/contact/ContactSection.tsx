@@ -1,4 +1,5 @@
 import { GameController, GithubLogoIcon, LinkedinLogo, Mailbox, Storefront } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -33,28 +34,28 @@ const ContactSection = () => {
                     </p>
 
                     <div className="contact-cards">
-                        <a href=" https://mail.google.com/mail/?view=cm&fs=1&to=vastavpansuriya4444@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <Link to=" https://mail.google.com/mail/?view=cm&fs=1&to=vastavpansuriya4444@gmail.com" target="_blank" rel="noopener noreferrer">
                             <div className="contact-card">
                                 <Mailbox size={32} weight="fill" className="contact-icon" />
                                 <p>vastavpansuriya4444@gmail.com</p>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/" target="_blank">
+                        <Link to="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/" target="_blank">
                             <div className="contact-card">
                                 <LinkedinLogo size={32} weight="fill" className="contact-icon" />
                                 <p>Vastav Pansuriya</p>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="https://github.com/VastavPansuriya" target="_blank">
+                        <Link to="https://github.com/VastavPansuriya" target="_blank">
                             <div className="contact-card">
                                 <GithubLogoIcon size={32} weight="fill" className="contact-icon" />
                                 <p>Vastav Pansuriya</p>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="https://vastav.itch.io/" target="_blank">
+                        <Link to="https://vastav.itch.io/" target="_blank">
                             <div className="contact-card">
                                 <div className="icon-stack contact-icon">
                                     <Storefront size={32} />
@@ -66,7 +67,7 @@ const ContactSection = () => {
                                 </div>
                                 <p>/Itch.io</p>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

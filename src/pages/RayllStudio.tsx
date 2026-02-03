@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
+import { Link } from "react-router-dom";
 
 
 const fearstofathom: ExperienceItem[] = [
@@ -39,14 +40,14 @@ const fearstofathom: ExperienceItem[] = [
                                 <li>Handled <span className="highlight">manual UI interaction</span> like pointer enter, pointer exit through ExecuteEvents.Execute, Allow user to interact with the UI that exist on center of the screen</li>
                                 <li>Used <span className="highlight">Observer design pattern</span> for script communication</li>
                                 <li>Using <span className="highlight">client and server based RPC methods</span> sync player UI interaction </li>
-                                <a
-                                    href="https://github.com/VastavPansuriya/Code-Samples/blob/main/OptionsCanvasManager.cs"
+                                <Link
+                                    to="https://github.com/VastavPansuriya/Code-Samples/blob/main/OptionsCanvasManager.cs"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="code-link"
                                 >
                                     &lt;code&gt;
-                                </a>
+                                </Link>
 
                             </ul>
 
@@ -84,14 +85,14 @@ const fearstofathom: ExperienceItem[] = [
                                 <li>Tweening for stop and start car movements.</li>
                                 <li>Dynamic object detection with using <span className="highlight">abstraction</span> and <span className="highlight">layers</span>.</li>
                             </ul>
-                            <a
-                                href="https://github.com/VastavPansuriya/Code-Samples/tree/main/TrafficSystemScripts"
+                            <Link
+                                to="https://github.com/VastavPansuriya/Code-Samples/tree/main/TrafficSystemScripts"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="code-link"
                             >
                                 &lt;code&gt;
-                            </a>
+                            </Link>
 
                         </div>
                         <div className="hero-poster-media__image">
@@ -105,14 +106,14 @@ const fearstofathom: ExperienceItem[] = [
                                 <li>Built a pedestrian logic that work with multiple system like <span className="highlight">Dialogue System</span>, <span className="highlight">Waypoint System</span>, <span className="highlight">Interaction System</span> </li>
                                 <li>Skills include<span className="highlight">Editor Scripting</span>, <span className="highlight">Refactoring</span>, <span className="highlight">OOPs</span>, <span className="highlight">Design Patterns</span>.</li>
                             </ul>
-                            <a
-                                href="https://github.com/VastavPansuriya/Code-Samples/tree/main/WaypointSystem"
+                            <Link
+                                to="https://github.com/VastavPansuriya/Code-Samples/tree/main/WaypointSystem"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="code-link"
                             >
                                 &lt;code&gt;
-                            </a>
+                            </Link>
 
                         </div>
                     </div>
