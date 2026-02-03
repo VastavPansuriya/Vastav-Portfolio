@@ -1,22 +1,23 @@
 :root {
     /* Base */
-    --background: #f8f9fa;
-    --surface: #ffffff;
-    --surface-soft: #e9ecef;
+    --background: #F5E7C6;
+    --surface: #F5E7C6;
+    --surface-soft: #F5E7C6;
 
     /* Accent colors from palette */
-    --accent: #495057;
-    --accent-soft: #6c757d;
+    --accent: #222222;
+    --accent-soft: #222222;
 
     /* Text */
-    --text: #212529;
-    --text-muted: #6c757d;
+    --text: #222222;
+    --text-muted: #222222;            
 
     /* Borders */
-    --border: #ced4da;
+    --border: #F5E7C6;
 
     /* Utility */
-    --highlight: #343a40;
+    --highlight: #FA8112
+    ;
 
     /* Fonts - Clean and readable */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -24,9 +25,10 @@
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
     /* Extended color palette */
-    --bgColor: #f8f9fa;
-    --bgDarkColor: #212529;
+    --bgColor: #FAF3E1;
+    --bgDarkColor: #222222;
     --highlightColor: #495057;
     --textColor: #212529;
     --headerColor: #ffffff;
 }
+

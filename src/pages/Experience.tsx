@@ -131,7 +131,7 @@ const workCompanies = [
                 id: "4",
                 title: "VR Simulations",
                 image: "/Gifs/i3SimGif.gif",
-                link: "/experience/i3simulation#f2f-pc",
+                link: "/experience/i3simulation",
                 role: "Game Developer",
                 skills: ["Unreal Engine", "C++", "VR", "JSON", "FFmpeg", "Replay Systems"]
             }
@@ -145,7 +145,7 @@ const workCompanies = [
                 id: "5",
                 title: "Keyboard Clicker",
                 image: "/Gifs/KeyboardClicker.gif",
-                link: "#marquee-solution",
+                link: "/experience/marquee",
                 role: "Full Stack Developer",
                 skills: ["Unity", "C#", "Mobile", "Google Ads", "Analytics", "UI/UX"]
             },
@@ -153,7 +153,7 @@ const workCompanies = [
                 id: "6",
                 title: "Cannon Guardian",
                 image: "/Gifs/CannonGardian.gif",
-                link: "#marquee-solution",
+                link: "/experience/marquee",
                 role: "Game Developer",
                 skills: ["Unity", "C#", "Mobile", "Gameplay", "Level Design"]
             },
@@ -161,7 +161,7 @@ const workCompanies = [
                 id: "7",
                 title: "Ball Sort 3D",
                 image: "/Gifs/BallSorting3d.gif",
-                link: "#marquee-solution",
+                link: "/experience/marquee",
                 role: "Game Developer",
                 skills: ["Unity", "C#", "Scriptable Objects", "Level Design", "Puzzle Mechanics"]
             },
@@ -169,7 +169,7 @@ const workCompanies = [
                 id: "8",
                 title: "Stack Build",
                 image: "/Gifs/StackBuild.gif",
-                link: "#marquee-solution",
+                link: "/experience/marquee",
                 role: "Game Developer",
                 skills: ["Unity", "C#", "3D Physics", "Environment", "Game Feel"]
             },
@@ -177,7 +177,7 @@ const workCompanies = [
                 id: "9",
                 title: "Crowd Clash",
                 image: "/Gifs/CrowdClash.gif",
-                link: "#marquee-solution",
+                link: "/experience/marquee",
                 role: "Game Developer",
                 skills: ["Unity", "C#", "Crowd Simulation", "Mobile", "Multiplayer"]
             }
@@ -191,7 +191,7 @@ const personalProjects = [
         id: "10",
         title: "Pawn Gambit",
         image: "Gifs/PawnGambit.gif",
-        link: "/pawngambit",
+        link: "/experience/personal",
         role: "Solo Developer",
         skills: ["Unity", "C#", "Strategy", "AI", "Board Games"]
     },
@@ -199,7 +199,7 @@ const personalProjects = [
         id: "11",
         title: "Zero Effort",
         image: "Gifs/ZeroEffort.gif",
-        link: "/zeroeffort",
+        link: "/experience/personal",
         role: "Solo Developer",
         skills: ["Unity", "C#", "Minimalist", "Mobile", "Casual"]
     },
@@ -207,7 +207,7 @@ const personalProjects = [
         id: "12",
         title: "Hurrr",
         image: "Gifs/Hurr.gif",
-        link: "/hurrr",
+        link: "/experience/personal",
         role: "Solo Developer",
         skills: ["Unity", "C#", "Experimental", "Sound", "Interaction"]
     },
@@ -215,7 +215,7 @@ const personalProjects = [
         id: "13",
         title: "Unreal Like DataTable",
         image: "/Gifs/UnrealLikeDatatable.gif",
-        link: "/kitchenchaos",
+        link: "/experience/personal",
         role: "",
         skills: ["Unity", "C#", "EditorScripting", "ASMDF", "ScriptableObjects"]
     },

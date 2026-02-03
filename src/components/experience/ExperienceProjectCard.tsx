@@ -12,7 +12,7 @@ const ExperienceProjectCard = ({ title, image, link }: Props) => {
         "F2F Android/iOS", 
         "Unannounced",
         "Kitchen Chaos",
-        "Pawn Gambit", 
+        "Pawn Gambit",  
         "Zero Effort",
         "Smile Snake",
         "Photon Phobia",

@@ -18,19 +18,19 @@ const Home = () => {
                             and programming knowledge of C# and C++.
                         </p>
                         <div style={{ marginTop: "15px" }}>
-                            <Link className="resume-pdf" to="/Vastav-Pansuriya.pdf"
+                            <Link className="clickable-buttons" to="/Vastav-Pansuriya.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"><ReadCvLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                            <Link className="resume-pdf" to="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/"
+                            <Link className="clickable-buttons" to="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/"
                                 target="_blank"
                                 rel="noopener noreferrer"><LinkedinLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                            <Link className="resume-pdf" to="https://github.com/VastavPansuriya"
+                            <Link className="clickable-buttons" to="https://github.com/VastavPansuriya"
                                 target="_blank"
                                 rel="noopener noreferrer"><GithubLogoIcon size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
-                            <Link className="resume-pdf contact-icon" to="/experience">
+                            <Link className="clickable-buttons contact-icon" to="/experience">
                                 <CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} />
                             </Link>
                         </div>
