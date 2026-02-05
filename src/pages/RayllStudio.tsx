@@ -3,87 +3,82 @@ import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
 import { Link } from "react-router-dom";
 
-
 const fearstofathom: ExperienceItem[] = [
     {
         type: "work",
         summary: (
             <div>
-                <h4><span className="highlight">PAGE IS IN CONSTRUCTION</span></h4>
+                <h5><span className="highlight">PAGE IS UNDER CONSTRUCTION</span></h5>
 
-                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - SCRATCH CREAK</h1>
-                <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>DialogueSystem</h2>
+                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - SCRATCH CREEK</h1>
+                <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Dialogue System</h2>
 
                 <div className="hero-poster hero-poster-media">
-                    <img src="/RayllProject/DialogueSystem.jpg" alt="dialogue system" />
-                    <img src="/RayllProject/Road96.jpg" alt="dialogue system alt" />
+                    <img src="/RayllProject/DialogueSystem.jpg" alt="Dialogue System Interface" />
+                    <img src="/RayllProject/Road96.jpg" alt="Road96 Inspired UI" />
                 </div>
+
                 <h4 style={{ color: "var(--accent)", marginBottom: "10px" }}>Goal</h4>
-                <p><span className="highlight">Road96</span> inspired UI with dialogue interaction that sync accross players. We needed option to be render on world position based 2D canvas that follow the npc or the other player</p>
+                <p>Create a <span className="highlight">Road96-inspired dialogue interface</span> with synchronized multiplayer interactions. The system required dynamic UI rendering on world-position-based 2D canvases that follow NPCs and other players.</p>
+
                 <h4 style={{ color: "var(--accent)", marginTop: "0" }}>Execution</h4>
                 <div className="experience-text">
                     <ul>
-                        <span className="highlight">Custom UI Interaction System</span>,
-                        <span className="highlight">Dialogue System</span>, are the systems that I've used and created for archive this result.
+                        Developed and integrated two core systems: <span className="highlight">Custom UI Interaction System</span> and <span className="highlight">Dialogue System</span>.
                     </ul>
-                    <div className="hero-poster-media">
 
+                    <div className="hero-poster-media">
                         <div className="hero-poster-media__image">
-                            <img src="/RayllProject/Npc.jpg" alt="Dialogue system UI" />
+                            <img src="/RayllProject/Npc.jpg" alt="NPC Dialogue Interface" />
                         </div>
 
                         <div className="hero-poster__content">
                             <h3>Custom UI Interaction System</h3>
-                            <p></p>
                             <ul>
-                                <li></li>
-                                <li>Handled <span className="highlight">manual UI interaction</span> like pointer enter, pointer exit through ExecuteEvents.Execute, Allow user to interact with the UI that exist on center of the screen</li>
-                                <li>Used <span className="highlight">Observer design pattern</span> for script communication</li>
-                                <li>Using <span className="highlight">client and server based RPC methods</span> sync player UI interaction </li>
+                                <li>Implemented <span className="highlight">manual UI interaction handling</span> using ExecuteEvents.Execute for pointer events</li>
+                                <li>Designed system to enable center-screen UI interactions while maintaining game immersion</li>
+                                <li>Utilized <span className="highlight">Observer design pattern</span> for efficient script communication</li>
+                                <li>Created <span className="highlight">client-server RPC methods</span> to synchronize UI interactions across all players</li>
                                 <Link
                                     to="https://github.com/VastavPansuriya/Code-Samples/blob/main/OptionsCanvasManager.cs"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="code-link"
                                 >
-                                    &lt;code&gt;
+                                    &lt;View Code&gt;
                                 </Link>
-
                             </ul>
-
                         </div>
-
 
                         <div className="hero-poster__content">
-                            <h3>Dialogue System(PixelCrushers)</h3>
-                            <p>We majorly used dialogue system for all kinds of dialogue and conversation for the story-telling. Below are the things that I've extended upon dialogue system. </p>
+                            <h3>Dialogue System (PixelCrushers)</h3>
+                            <p>Extended the PixelCrushers Dialogue System for comprehensive narrative implementation:</p>
                             <ul>
-                                <li><span className="highlight">Conversation and flow control</span> helper methods invoke call from LUA</li>
-                                <li>Introduction based name rendering</li>
-                                <li><span className="highlight">Isolated Conversation</span> based on player distance or the area</li>
-                                <li>An <span className="highlight">NPC base</span> class system that work majorly with dialog system and navigation</li>
+                                <li>Built <span className="highlight">conversation flow control</span> helper methods invoked from LUA scripts</li>
+                                <li>Implemented dynamic name rendering based on introduction states</li>
+                                <li>Created <span className="highlight">isolated conversation zones</span> based on player proximity</li>
+                                <li>Developed <span className="highlight">NPC base class system</span> integrating dialogue and navigation systems</li>
                             </ul>
-
                         </div>
 
                         <div className="hero-poster-media__image">
-                            <img src="/RayllProject/PixelCrushertsDialogueSystem.png" alt="Dialogue system UI" />
+                            <img src="/RayllProject/PixelCrushertsDialogueSystem.png" alt="Dialogue System Architecture" />
                         </div>
                     </div>
-                    <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Other Networked Systems</h2>
+
+                    <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Networked Systems</h2>
 
                     <div className="hero-poster-media">
-
                         <div className="hero-poster-media__image">
-                            <img src="/RayllProject/TrafficSystem.png" alt="Dialogue system UI" />
+                            <img src="/RayllProject/TrafficSystem.png" alt="Traffic System Visualization" />
                         </div>
                         <div className="hero-poster__content">
                             <h3>Networked Traffic System</h3>
-                            <p><span className="highlight">A syncronised server authoritative traffic system</span> that uses custom spline based movement.</p>
+                            <p>Built a <span className="highlight">server-authoritative synchronized traffic system</span> using custom spline-based movement.</p>
                             <ul>
-                                <li>Custom spline animator work with  with other components.</li>
-                                <li>Tweening for stop and start car movements.</li>
-                                <li>Dynamic object detection with using <span className="highlight">abstraction</span> and <span className="highlight">layers</span>.</li>
+                                <li>Created custom spline animator integrating with existing components</li>
+                                <li>Implemented tweening for smooth vehicle acceleration and deceleration</li>
+                                <li>Designed dynamic obstacle detection using <span className="highlight">abstraction layers</span></li>
                             </ul>
                             <Link
                                 to="https://github.com/VastavPansuriya/Code-Samples/tree/main/TrafficSystemScripts"
@@ -91,20 +86,20 @@ const fearstofathom: ExperienceItem[] = [
                                 rel="noopener noreferrer"
                                 className="code-link"
                             >
-                                &lt;code&gt;
+                                &lt;View Code&gt;
                             </Link>
-
                         </div>
+
                         <div className="hero-poster-media__image">
-                            <img src="/RayllProject/PedestrianSystem.png" alt="Dialogue system UI" />
+                            <img src="/RayllProject/PedestrianSystem.png" alt="Pedestrian System Overview" />
                         </div>
                         <div className="hero-poster__content">
                             <h3>Pedestrian System</h3>
-                            <p><span className="highlight">PedestrianNPC</span> that uses waypoint system to walk around a footpath based on randomized location and braches of path.</p>
+                            <p>Developed a <span className="highlight">networked waypoint system</span> for NPC navigation along randomized paths.</p>
                             <ul>
-                                <li>Using editor scripting and online resources, crafted a <span className="highlight">networked waypoint system</span></li>
-                                <li>Built a pedestrian logic that work with multiple system like <span className="highlight">Dialogue System</span>, <span className="highlight">Waypoint System</span>, <span className="highlight">Interaction System</span> </li>
-                                <li>Skills include<span className="highlight">Editor Scripting</span>, <span className="highlight">Refactoring</span>, <span className="highlight">OOPs</span>, <span className="highlight">Design Patterns</span>.</li>
+                                <li>Created editor scripting tools for waypoint management</li>
+                                <li>Integrated pedestrian logic with <span className="highlight">Dialogue</span>, <span className="highlight">Waypoint</span>, and <span className="highlight">Interaction</span> systems</li>
+                                <li>Applied <span className="highlight">OOP principles</span> and <span className="highlight">design patterns</span> for maintainable architecture</li>
                             </ul>
                             <Link
                                 to="https://github.com/VastavPansuriya/Code-Samples/tree/main/WaypointSystem"
@@ -112,42 +107,36 @@ const fearstofathom: ExperienceItem[] = [
                                 rel="noopener noreferrer"
                                 className="code-link"
                             >
-                                &lt;code&gt;
+                                &lt;View Code&gt;
                             </Link>
-
                         </div>
                     </div>
-                    <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Other Systems</h2>
+
+                    <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Additional Systems</h2>
 
                     <div className="hero-poster__content">
-                        <p>Had a chanse to work on variety of small interactions and other skills that i can't showcase, but some of those mentioned below.</p>
+                        <p>Contributed to various game systems enhancing gameplay experience:</p>
                         <ul>
-                            <li><span className="highlight">Networked Jumpscare</span>,
-                                <span className="highlight">Interactable Bed with hiding machanics</span>,
-                                <span className="highlight">Cinemetic look at</span>,
-                                <span className="highlight">In game Mini-Game</span>,
-                                <span className="highlight">Editor Scripting</span>,
-                                <span className="highlight">Potty</span>,
-                                <span className="highlight">NPC Door Navigation</span>,
-                                <span className="highlight">Visual Cue</span>,
-                                <span className="highlight">Refactoring</span>,
-                            </li>
-                            <li><span className="highlight">NPC Door</span>: Design a door system that worked with the navmesh link and allow NPC to use the door</li>
-                            <li><span className="highlight">Potty</span>: A full interactive element of the game for improving game feel</li>
-                            <li><span className="highlight">Jumpscare</span>: Had a chanse to work on a small sequence of jumpscare with maintaining isolation of different player. Improved variety of soft skills to improve game feel and workflow</li>
+                            <li><span className="highlight">Networked Jumpscare System</span> with player isolation</li>
+                            <li><span className="highlight">Interactive Bed System</span> with hiding mechanics</li>
+                            <li><span className="highlight">Cinematic Camera Controls</span></li>
+                            <li><span className="highlight">In-game Mini-Games</span></li>
+                            <li><span className="highlight">NPC Door Navigation</span> with navmesh integration</li>
+                            <li><span className="highlight">Visual Feedback Systems</span> for player interactions</li>
+                            <li><span className="highlight">Code Refactoring</span> for improved performance</li>
                         </ul>
-
                     </div>
+
                     <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Summary</h2>
 
                     <div className="hero-poster-media">
                         <div className="hero-poster-media__image">
-                            <img src="/RayllProject/F2FScratchCreek.png" alt="Dialogue system UI" />
+                            <img src="/RayllProject/F2FScratchCreek.png" alt="Fears to Fathom Game Screenshot"/>
                         </div>
-                    </div>
-                    <div className="hero-poster__content">
-                        <h4>This project allowed me to work on variety of different system and logic. with that I've done personal development in verbal and nonverbal things. I improved on every espect and learned from my mistake wheather if it's programming or working with team</h4>
-                        <p>Throwout the project these are the skills that I've improved or Learned: <span className="highlight">C#, Multiplayer, OOPs, Refactoring, Design Patterns, Notion, Photoshop(Basic), UX, Thirdparty tools(FinalIK, DialogueSystem, OdinInspector)</span></p>
+                        <div className="hero-poster__content">
+                            <h3>This project provided extensive experience with diverse game systems and multiplayer architecture. I developed both technical skills and collaborative abilities through team coordination and iterative improvement.</h3>
+                            <p>Key skills developed: <span className="highlight">C#, Multiplayer Networking, OOP Principles, Code Refactoring, Design Patterns, Project Management (Notion), UI/UX Design, Third-party Tool Integration (FinalIK, DialogueSystem, OdinInspector)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,55 +149,51 @@ const f2fAndroidiOS: ExperienceItem[] = [
         type: "work",
         summary: (
             <div>
-                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - ANDROID/IOS</h1>
+                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - ANDROID/IOS PORT</h1>
 
                 <div className="hero-poster-media">
                     <div className="hero-poster-media__image">
-                        <img src="/RayllProject/F2FHomeAlone.png" alt="Dialogue system UI" />
+                        <img src="/RayllProject/F2FHomeAlone.png" alt="Mobile Game Screenshot 1" />
                     </div>
                     <div className="hero-poster-media__image">
-                        <img src="/RayllProject/F2FNoorwoodHitchhike.png" alt="Dialogue system UI" />
+                        <img src="/RayllProject/F2FNoorwoodHitchhike.png" alt="Mobile Game Screenshot 2" />
                     </div>
                 </div>
-                <h4 style={{ color: "var(--accent)", marginBottom: "10px" }}>Goal</h4>
-                <p>Port all the logics, system, and graphics for the mobile versions for <span className="highlight"> both Android and iOS platform</span></p>
-                <div className="hero-poster-media">
 
+                <h4 style={{ color: "var(--accent)", marginBottom: "10px" }}>Goal</h4>
+                <p>Port existing PC game systems, logic, and assets to <span className="highlight">both Android and iOS platforms</span> while maintaining performance and user experience.</p>
+
+                <div className="hero-poster-media">
                     <div className="experience-text">
                         <h4 style={{ color: "var(--accent)", marginBottom: "10px" }}>Execution</h4>
                         <ul>
-                            <li><span className="highlight">Implemented abstract interaction system</span>, allowing reduse update call for checking interaction in every single interactables</li>
-                            <li><span className="highlight">Utilised Unity's new input system</span> to port all the inputs from pc to mobile</li>
-                            <li>Implemented <span className="highlight">responsive UI</span> for the various types of mobile devices.</li>
-                            <li>Compressed texture and audio size to increase performance and decrease game size</li>
-                            <li><span className="highlight">Combined meshes to reduce the drawcall</span></li>
-                            <li>Light-baking and liting optimization</li>
-                            <li>Replace unity terrain with backed meshe and backed texture </li>
+                            <li>Implemented <span className="highlight">abstract interaction system</span> to minimize Update() calls across interactable objects</li>
+                            <li>Migrated all input handling to <span className="highlight">Unity's New Input System</span> for cross-platform support</li>
+                            <li>Developed <span className="highlight">responsive UI</span> adaptable to various mobile screen sizes</li>
+                            <li>Optimized asset sizes through texture and audio compression</li>
+                            <li>Reduced draw calls through <span className="highlight">mesh combination techniques</span></li>
+                            <li>Implemented light baking and lighting optimizations</li>
+                            <li>Replaced Unity terrain with optimized baked meshes and textures</li>
                         </ul>
                     </div>
+
                     <div className="experience-text">
                         <h4 style={{ color: "var(--accent)", marginBottom: "10px" }}>Results</h4>
                         <ul>
-                            <li><span className="highlight">Boosted FPS from 7-10 to 30</span> on mid-range mobile devices by optimising game behaviours and assets.</li>
-                            <li>Use of Unity Profiling and debugging tools<span className="highlight"> Increased performance by 200%.</span></li>
-                            <li><span className="highlight">Reduced game size by 80% (2GB → 400MB)</span> through scene and asset optimisation.</li>
-                            <li><span className="highlight">Decreasing update calls by 60%.</span></li>
+                            <li><span className="highlight">Increased FPS from 7-10 to stable 30</span> on mid-range mobile devices</li>
+                            <li><span className="highlight">Improved performance by 200%</span> through profiling and optimization</li>
+                            <li><span className="highlight">Reduced game size by 80%</span> (2GB → 400MB)</li>
+                            <li><span className="highlight">Decreased Update() calls by 60%</span> through system architecture improvements</li>
                         </ul>
                     </div>
                 </div>
+
                 <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Summary</h2>
-
-                <div className="hero-poster-media">
-                    <div className="hero-poster-media__image">
-                        <img src="/RayllProject/F2FScratchCreek.png" alt="Dialogue system UI" />
-                    </div>
-                </div>
                 <div className="hero-poster__content">
-                    <h4>Had a great chance working with mentorship and learning various stuff. <span className="highlight">Improved team talks, Management, Researching and other soft skills during this.</span></h4>
-                    <p>Throwout the project these are the skills that I've improved or Learned: <span className="highlight">Optimisation, C#, OOPs, Refactoring, Design Patterns, Notion</span>.</p>
+                    <h3>This project offered valuable mentorship opportunities while enhancing technical and soft skills. <span className="highlight">Improved team communication, project management, research methodologies, and collaborative problem-solving.</span></h3>
+                    <p>Skills developed: <span className="highlight">Mobile Optimization, C#, OOP Principles, Code Refactoring, Design Patterns, Project Management</span>.</p>
                 </div>
-
-            </div >
+            </div>
         ),
     },
 ];
@@ -218,50 +203,71 @@ const unannounced: ExperienceItem[] = [
         type: "work",
         summary: (
             <div>
-                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - CANCLED</h1>
+                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>UNANNOUNCED PROJECT</h1>
 
                 <div className="hero-poster__content">
-                    <h4>I can't share the systems and stuff with the actual visuals as the project is not released or unannounced in public, but below are the things with raw visual that I've workerd on</h4>
+                    <h5>Note: Project details and visuals are confidential as this title has not been publicly announced. Below prototypes demonstrate implemented systems.</h5>
+                    <h5><span className="highlight">All visuals shown are development prototypes</span></h5>
                 </div>
+
                 <div className="hero-poster-media">
+                    <div className="experience-text">
+                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Interaction System</h3>
+                        <ul>
+                            <li>Architected <span className="highlight">unified interaction framework</span></li>
+                            <li>Implemented single-input binding for all interactions to maintain focus on narrative experience</li>
+                            <li>Created <span className="highlight">conflict-free pickup/interaction system</span> with intuitive controls</li>
+                        </ul>
+                    </div>
+
+                    <div className="hero-poster hero-poster--dual">
+                        <img src="/RayllProject/InteractionSystem.gif" alt="Interaction System Prototype" />
+                    </div>
+
 
                     <div className="experience-text">
-                        <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Interaction System</h2>
+                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Cooking System</h3>
                         <ul>
-                            <li>Crafted <span className="highlight">Unified interaction system</span></li>
-                            <li>A Single input binding use for all kind of interaction and most of the action in order to keep user experience simple and story focus.</li>
-                            <li>Implemented a <span className="highlight"> conflict-free pickup/interaction system</span> with unified input bindings.</li>
+                            <li>Developed <span className="highlight">modular cooking system</span> with designer-configurable recipes</li>
+                            <li>Utilized ScriptableObjects for data-driven recipe management</li>
+                            <li>Applied <span className="highlight">OOP principles and design patterns</span> for extensible architecture</li>
                         </ul>
                     </div>
+                    <div className="hero-poster hero-poster--dual">
+                        <img src="/RayllProject/CookingSystem.gif" alt="Cooking System Prototype" />
+                    </div>
+
                     <div className="experience-text">
-                        <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Cocking System</h2>
+                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Cleaning System</h3>
                         <ul>
-                            <li>A <span className="highlight">modular cooking system</span> that allow designer to create various types of recipe</li>
-                            <li>Use of ScriptableObjects in order to manage the cooking data</li>
-                            <li><span className="highlight">Heavy use of OOPs and Design patterns</span></li>
+                            <li>Implemented <span className="highlight">custom shader-based interaction system</span></li>
+                            <li>Integrated multiple existing systems to create cohesive gameplay mechanics</li>
+                            <li>Utilized DOTween for smooth animation transitions</li>
                         </ul>
                     </div>
+
+                    <div className="hero-poster hero-poster--dual">
+                        <img src="/RayllProject/CleaningSystem.gif" alt="Cleaning System Prototype" />
+                    </div>
+
+
                     <div className="experience-text">
-                        <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Cleaning System</h2>
+                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Additional Systems</h3>
                         <ul>
-                            <li><span className="highlight">Custom Shader based interaction</span></li>
-                            <li><span className="highlight">Binded various previously crafted systems</span> to archive required results</li>
-                            <li>DOTween library used for smooth movement</li>
+                            <li><span className="highlight">Intro/Subtitle System</span> for narrative delivery</li>
+                            <li><span className="highlight">Sequence Manager</span> for cinematic gameplay moments</li>
+                            <li>Implemented game introduction sequence</li>
+                            <li>Enhanced <span className="highlight">Waypoint System</span> for NPC navigation</li>
                         </ul>
                     </div>
-                    <div className="experience-text">
-                        <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Other Stuff/System</h2>
-                        <ul>
-                            <li><span className="highlight">Intro/Sub System</span> to show small intros and subtitles</li>
-                            <li><span className="highlight">Sequence manager</span> to manage various sequences of game</li>
-                            <li>Chanse to work on intro sequence of the game</li>
-                            <li><span className="highlight">Waypoint System</span></li>
-                        </ul>
+                    <div className="hero-poster hero-poster--dual">
+                        <img src="/RayllProject/OtherSystems.gif" alt="Additional Systems Prototype" />
                     </div>
                 </div>
+
                 <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Summary</h2>
                 <div className="hero-poster__content">
-                    <h4>Having an opportunity to work with team and discuss various ideas and approches was the pleasure experience. Realy had a good time solving problems, dicuss System Achitecture, Work with designers and other team members</h4>
+                    <h4>This project provided excellent opportunities for collaborative system architecture design, problem-solving with team members, and working closely with designers to implement gameplay systems.</h4>
                 </div>
             </div>
         ),
@@ -295,10 +301,7 @@ const RayllStudio = () => {
     }, []);
 
     return (
-        <main style={{ paddingBottom: "40px" }} >
-            {/* <section className="experience-hero" id="f2f-pc">
-                <SectionHeading title="Fears to Fathom - Scratch Creek" />
-            </section> */}
+        <main style={{ paddingBottom: "40px" }}>
             <section className="experience-hero">
                 <div className="experience-section">
                     {fearstofathom.map((item, index) => (
@@ -307,11 +310,6 @@ const RayllStudio = () => {
                 </div>
             </section>
 
-
-
-            {/* <section className="experience-hero" id="f2f-mobile">
-                <SectionHeading title="F2F Android/iOS" />
-            </section> */}
             <section className="experience-hero">
                 <div className="experience-section">
                     {f2fAndroidiOS.map((item, index) => (
@@ -320,9 +318,6 @@ const RayllStudio = () => {
                 </div>
             </section>
 
-            {/* <section className="experience-hero" id="f2f-unannounced">
-                <SectionHeading title="Unannounced" />
-            </section> */}
             <section className="experience-hero">
                 <div className="experience-section">
                     {unannounced.map((item, index) => (
@@ -330,8 +325,7 @@ const RayllStudio = () => {
                     ))}
                 </div>
             </section>
-            {/* <ProjectNavigator /> */}
-        </main >
+        </main>
     );
 };
 

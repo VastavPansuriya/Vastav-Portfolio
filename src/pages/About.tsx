@@ -4,7 +4,58 @@ import { Link } from "react-router-dom";
 const About = () => {
     return (
         <main>
-            <section className="hero hero-grid">
+            <section className="home hero" >
+                <div className="home-card">
+                    <div className="hero-poster hero-poster--dual">
+                        <div>
+                            <h1 style={{ color: "var(--accent)" }}>
+                                I'm Vastav
+                            </h1>
+                            <p style={{ marginTop: "8px", marginBottom: "15px" }}>
+                                A game programmer with 4+ years of <Link to="/experience"><span className="highlight"><u>experience</u></span></Link> in the industry.
+                                 I started my journey with learning<span className="highlight">Unity and C#</span> while doing collage externally.
+                                  By the collage fineshes I have gained variety of experiences working with Unity and C#.
+                                   Over time, I improved a lot by learning game development equivalent, such as OOPS, code architecture and principles, Unity engine relevant stuff, third-party tools and API implementations, system design and more.
+                            </p>
+
+                            <p style={{ marginTop: "8px", marginBottom: "15px" }}>
+                                Beyond my work life, I love to visit natural places, Play story, 
+                                FPS, and platformer games. I would love to draw, play music, and learn strong maths.
+                            </p>
+                            <p style={{ marginTop: "8px", marginBottom: "15px" }}>
+                                <b>Games that I liked</b>
+                            </p>
+                            <p>JUSANT | PLANET OF LANA | CELESTE</p>
+                            <p style={{ marginTop: "8px", marginBottom: "15px" }}>
+                                <b>Movies that I liked</b>
+                            </p>
+                            <p> GRAN TURISMO | MEET JOE BLACK | WHIPLASH</p>
+                            <Link className="clickable-buttons" to="/Vastav-Pansuriya.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"><ReadCvLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
+
+                            <Link className="clickable-buttons" to="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/"
+                                target="_blank"
+                                rel="noopener noreferrer"><LinkedinLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
+
+                            <Link className="clickable-buttons" to="https://github.com/VastavPansuriya"
+                                target="_blank"
+                                rel="noopener noreferrer"><GithubLogoIcon size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
+
+                            <Link className="clickable-buttons contact-icon" to="/experience">
+                                <CaretDoubleRight size={20} weight="fill" style={{ marginTop: "2px" }} />
+                            </Link>
+                        </div>
+                        <div className="hero-right">
+                            <div>
+                                <img src="/avatar.png" className="hero-avatar" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            {/* <section className="hero hero-grid">
                 <div className="hero-left">
                     <h1 style={{ color: "var(--accent)" }}>
                         I'm Vastav
@@ -35,23 +86,11 @@ const About = () => {
                 </div>
 
                 <div className="hero-right">
-                    <div
-                        style={{
-                            background: "var(--surface)",
-                            border: "1px solid var(--border)",
-                            padding: "20px",
-                            marginTop: "24px",
-                            borderRadius: "8px",
-                        }}
-                    >
-                        <img
-                            src="/avatar.png"
-                            alt="Vastav avatar"
-                            className="hero-avatar"
-                        />
+                    <div>
+                        <img src="/avatar.png" className="hero-avatar"/>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </main>
     );
 };
