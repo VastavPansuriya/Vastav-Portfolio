@@ -1,45 +1,49 @@
 import { useEffect } from "react";
 import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
-// import ProjectNavigator from "../components/ui/ProjectNavigator";
-// import { Link } from "react-router-dom";
-// import { CaretDoubleRight, GithubLogoIcon, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
 
 const i3simulation: ExperienceItem[] = [
     {
         type: "work",
         summary: (
             <div>
-                <h4><span className="highlight">PAGE IS IN CONSTRUCTION</span></h4>
-                <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>I3Simulation</h2>
-                <h4>At I3 Simulation with role of a Programmer, I was working on VR based simulations, where I improved and crafted new systems based on data and user feedbacks. </h4>
+                <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>I3 SIMULATION</h1>
+                <h4>As a Programmer at I3 Simulation, I developed <span className="highlight">VR-based training simulations</span>, designing and enhancing systems based on user data and feedback to improve training effectiveness.</h4>
+                
                 <div className="hero-poster-media">
                     <div className="hero-poster hero-poster">
-                        <img src="/I3Simulation/InterviewSimulation.gif" />
+                        <img src="/I3Simulation/InterviewSimulation.gif" alt="Interview Simulation System" />
                     </div>
                     <div>
-                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Interview Simulation</h3>
+                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Interview Simulation System</h3>
                         <ul>
-                            <li>Build a system that reads the user recorded JSON data and simulates the user actions in realtime</li>
-                            <li>Crafted a modular Data Loading that loads all the recorded sessions with UI allowing user to select the specific interview session to simulate.</li>
-                            <li>Build a screen recording system that uses the ffmpeg, allowing user to export the simulated videos into video format</li>
+                            <li>Developed a <span className="highlight">JSON-based playback system</span> that simulates recorded user interactions in real-time</li>
+                            <li>Created a <span className="highlight">modular data loading architecture</span> with UI controls for selecting specific interview sessions</li>
+                            <li>Implemented a <span className="highlight">screen recording system using FFmpeg</span> for exporting simulation sessions to video format</li>
                         </ul>
                     </div>
+                    
                     <div className="hero-poster hero-poster">
-                        <img src="/I3Simulation/AEDSimulation.gif" />
+                        <img src="/I3Simulation/AEDSimulation.gif" alt="VR Medical Resuscitation Simulation" />
                     </div>
-                    <p>
+                    <div>
+                        <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>VR Medical Resuscitation Training</h3>
                         <ul>
-                            <li> VR Medical Resuscitation: Improved CPR mechanics, AED usage simulations, and rescue breathing functionality with refactoring and added features. Improved tactile feedback and medical procedure accuracy in virtual training scenarios.</li>
-                            <li> Quality Assurance: Optimised systems based on user feedback, solved technical issues, and implemented analytics to track user interactions and performance metrics.</li>
+                            <li>Enhanced <span className="highlight">CPR mechanics, AED usage simulations, and rescue breathing functionality</span> through comprehensive refactoring and feature implementation</li>
+                            <li>Improved <span className="highlight">tactile feedback systems</span> and <span className="highlight">medical procedure accuracy</span> in virtual training scenarios</li>
+                            <li>Conducted <span className="highlight">quality assurance</span> by optimizing systems based on user feedback, resolving technical issues, and implementing analytics for performance tracking</li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
-            </div >
+                
+                <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Summary</h2>
+                <div className="hero-poster__content">
+                    <h4>This position provided extensive experience with <span className="highlight">advanced programming techniques</span> including <span className="highlight">C# reflection</span>, <span className="highlight">ScriptableObject-based event systems</span>, and learning with <span className="highlight">Unreal Engine UI</span>, <span className="highlight">Blueprints</span>, and <span className="highlight">C++</span>.</h4>
+                </div>
+            </div>
         ),
     },
 ];
-
 
 const I3Simulation = () => {
     // Auto-scroll to the section if coming from Experience page
@@ -69,9 +73,6 @@ const I3Simulation = () => {
 
     return (
         <main style={{ paddingBottom: "40px" }}>
-            {/* <section className="experience-hero" id="f2f-pc">
-                <SectionHeading title="I3 Simulations" />
-            </section> */}
             <section className="experience-hero">
                 <div className="experience-section">
                     {i3simulation.map((item, index) => (
@@ -79,8 +80,7 @@ const I3Simulation = () => {
                     ))}
                 </div>
             </section>
-            {/* <ProjectNavigator /> */}
-        </main >
+        </main>
     );
 };
 

@@ -124,63 +124,57 @@ const workCompanies = [
         ]
     },
     {
-        name: "i3 Simulations",
-        logo: "/i3_simulations_logo.jpg",
+        name: "Other Experiences",
+        logo: "",
         projects: [
             {
                 id: "4",
-                title: "VR Simulations",
+                title: "i3 Simulations",
                 image: "/Gifs/i3SimGif.gif",
                 link: "/experience/i3simulation",
                 role: "Game Developer",
                 skills: ["Unreal Engine", "C++", "VR", "JSON", "FFmpeg", "Replay Systems"]
-            }
-        ]
-    },
-    {
-        name: "Marquee Solution",
-        logo: "/marqueesolution_logo.jpg",
-        projects: [
+            },
             {
                 id: "5",
-                title: "Keyboard Clicker",
+                title: "Marquee Solution",
                 image: "/Gifs/KeyboardClicker.gif",
                 link: "/experience/marquee",
                 role: "Full Stack Developer",
                 skills: ["Unity", "C#", "Mobile", "Google Ads", "Analytics", "UI/UX"]
-            },
-            {
-                id: "6",
-                title: "Cannon Guardian",
-                image: "/Gifs/CannonGardian.gif",
-                link: "/experience/marquee",
-                role: "Game Developer",
-                skills: ["Unity", "C#", "Mobile", "Gameplay", "Level Design"]
-            },
-            {
-                id: "7",
-                title: "Ball Sort 3D",
-                image: "/Gifs/BallSorting3d.gif",
-                link: "/experience/marquee",
-                role: "Game Developer",
-                skills: ["Unity", "C#", "Scriptable Objects", "Level Design", "Puzzle Mechanics"]
-            },
-            {
-                id: "8",
-                title: "Stack Build",
-                image: "/Gifs/StackBuild.gif",
-                link: "/experience/marquee",
-                role: "Game Developer",
-                skills: ["Unity", "C#", "3D Physics", "Environment", "Game Feel"]
-            },
-            {
-                id: "9",
-                title: "Crowd Clash",
-                image: "/Gifs/CrowdClash.gif",
-                link: "/experience/marquee",
-                role: "Game Developer",
-                skills: ["Unity", "C#", "Crowd Simulation", "Mobile", "Multiplayer"]
             }
+            // {
+            //     id: "6",
+            //     title: "Cannon Guardian",
+            //     image: "/Gifs/CannonGardian.gif",
+            //     link: "/experience/marquee",
+            //     role: "Game Developer",
+            //     skills: ["Unity", "C#", "Mobile", "Gameplay", "Level Design"]
+            // },
+            // {
+            //     id: "7",
+            //     title: "Ball Sort 3D",
+            //     image: "/Gifs/BallSorting3d.gif",
+            //     link: "/experience/marquee",
+            //     role: "Game Developer",
+            //     skills: ["Unity", "C#", "Scriptable Objects", "Level Design", "Puzzle Mechanics"]
+            // },
+            // {
+            //     id: "8",
+            //     title: "Stack Build",
+            //     image: "/Gifs/StackBuild.gif",
+            //     link: "/experience/marquee",
+            //     role: "Game Developer",
+            //     skills: ["Unity", "C#", "3D Physics", "Environment", "Game Feel"]
+            // },
+            // {
+            //     id: "9",
+            //     title: "Crowd Clash",
+            //     image: "/Gifs/CrowdClash.gif",
+            //     link: "/experience/marquee",
+            //     role: "Game Developer",
+            //     skills: ["Unity", "C#", "Crowd Simulation", "Mobile", "Multiplayer"]
+            // }
         ]
     }
 ];

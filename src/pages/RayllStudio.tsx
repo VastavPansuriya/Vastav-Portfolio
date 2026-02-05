@@ -50,6 +50,10 @@ const fearstofathom: ExperienceItem[] = [
                             </ul>
                         </div>
 
+                        <div className="hero-poster-media__image">
+                            <img src="/RayllProject/PixelCrushertsDialogueSystem.png" alt="Dialogue System Architecture" />
+                        </div>
+                        
                         <div className="hero-poster__content">
                             <h3>Dialogue System (PixelCrushers)</h3>
                             <p>Extended the PixelCrushers Dialogue System for comprehensive narrative implementation:</p>
@@ -61,9 +65,6 @@ const fearstofathom: ExperienceItem[] = [
                             </ul>
                         </div>
 
-                        <div className="hero-poster-media__image">
-                            <img src="/RayllProject/PixelCrushertsDialogueSystem.png" alt="Dialogue System Architecture" />
-                        </div>
                     </div>
 
                     <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Networked Systems</h2>
