@@ -2,21 +2,26 @@ import { GameController, GithubLogoIcon, LinkedinLogo, Mailbox, Storefront } fro
 import { Link } from "react-router-dom";
 
 const ContactSection = () => {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const form = e.currentTarget;
 
-        fetch("/", {
+        const form = e.currentTarget;
+        const data = new FormData(form);
+
+        const res = await fetch("https://formspree.io/f/mykdgnlg", {
             method: "POST",
-            body: new FormData(form),
-        })
-            .then(() => {
-                alert("Message sent successfully 🚀");
-                form.reset();
-            })
-            .catch(() => {
-                alert("Something went wrong 😕");
-            });
+            body: data,
+            headers: {
+                Accept: "application/json",
+            },
+        });
+
+        if (res.ok) {
+            alert("Thanks! I’ll get back to you soon 👋");
+            form.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
     };
     return (
         <section className="contact-section" id="contact">
@@ -76,12 +81,9 @@ const ContactSection = () => {
                     <form
                         className="contact-form"
                         name="contact"
-                        method="POST"
-                        data-netlify="true"
-                        data-netlify-honeypot="bot-field"
                         onSubmit={handleSubmit}
                     >
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="_subject" value="New contact message from {{name}}" />
 
                         <input type="text" name="name" placeholder="Name" required />
                         <input type="email" name="email" placeholder="Email" required />
