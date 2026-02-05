@@ -53,7 +53,7 @@ const fearstofathom: ExperienceItem[] = [
                         <div className="hero-poster-media__image">
                             <img src="/RayllProject/PixelCrushertsDialogueSystem.png" alt="Dialogue System Architecture" />
                         </div>
-                        
+
                         <div className="hero-poster__content">
                             <h3>Dialogue System (PixelCrushers)</h3>
                             <p>Extended the PixelCrushers Dialogue System for comprehensive narrative implementation:</p>
@@ -117,7 +117,7 @@ const fearstofathom: ExperienceItem[] = [
 
                     <div className="hero-poster__content">
                         <p>Contributed to various game systems enhancing gameplay experience:</p>
-                        <ul>
+                        <ul >
                             <li><span className="highlight">Networked Jumpscare System</span> with player isolation</li>
                             <li><span className="highlight">Interactive Bed System</span> with hiding mechanics</li>
                             <li><span className="highlight">Cinematic Camera Controls</span></li>
@@ -132,7 +132,7 @@ const fearstofathom: ExperienceItem[] = [
 
                     <div className="hero-poster-media">
                         <div className="hero-poster-media__image">
-                            <img src="/RayllProject/F2FScratchCreek.png" alt="Fears to Fathom Game Screenshot"/>
+                            <img src="/RayllProject/F2FScratchCreek.png" alt="Fears to Fathom Game Screenshot" />
                         </div>
                         <div className="hero-poster__content">
                             <h3>This project provided extensive experience with diverse game systems and multiplayer architecture. I developed both technical skills and collaborative abilities through team coordination and iterative improvement.</h3>
@@ -214,6 +214,9 @@ const unannounced: ExperienceItem[] = [
                 <div className="hero-poster-media">
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Interaction System</h3>
+                        <div className="hero-poster">
+                            <img src="/RayllProject/InteractionSystem.gif" alt="Interaction System Prototype" />
+                        </div>
                         <ul>
                             <li>Architected <span className="highlight">unified interaction framework</span></li>
                             <li>Implemented single-input binding for all interactions to maintain focus on narrative experience</li>
@@ -221,25 +224,26 @@ const unannounced: ExperienceItem[] = [
                         </ul>
                     </div>
 
-                    <div className="hero-poster hero-poster--dual">
-                        <img src="/RayllProject/InteractionSystem.gif" alt="Interaction System Prototype" />
-                    </div>
 
 
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Cooking System</h3>
+                        <div className="hero-poster">
+                            <img src="/RayllProject/CookingSystem.gif" alt="Cooking System Prototype" />
+                        </div>
                         <ul>
                             <li>Developed <span className="highlight">modular cooking system</span> with designer-configurable recipes</li>
                             <li>Utilized ScriptableObjects for data-driven recipe management</li>
                             <li>Applied <span className="highlight">OOP principles and design patterns</span> for extensible architecture</li>
                         </ul>
                     </div>
-                    <div className="hero-poster hero-poster--dual">
-                        <img src="/RayllProject/CookingSystem.gif" alt="Cooking System Prototype" />
-                    </div>
+
 
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Cleaning System</h3>
+                        <div className="hero-poster">
+                            <img src="/RayllProject/CleaningSystem.gif" alt="Cleaning System Prototype" />
+                        </div>
                         <ul>
                             <li>Implemented <span className="highlight">custom shader-based interaction system</span></li>
                             <li>Integrated multiple existing systems to create cohesive gameplay mechanics</li>
@@ -247,13 +251,13 @@ const unannounced: ExperienceItem[] = [
                         </ul>
                     </div>
 
-                    <div className="hero-poster hero-poster--dual">
-                        <img src="/RayllProject/CleaningSystem.gif" alt="Cleaning System Prototype" />
-                    </div>
 
 
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Additional Systems</h3>
+                        <div className="hero-poster">
+                            <img src="/RayllProject/OtherSystems.gif" alt="Additional Systems Prototype" />
+                        </div>
                         <ul>
                             <li><span className="highlight">Intro/Subtitle System</span> for narrative delivery</li>
                             <li><span className="highlight">Sequence Manager</span> for cinematic gameplay moments</li>
@@ -261,9 +265,7 @@ const unannounced: ExperienceItem[] = [
                             <li>Enhanced <span className="highlight">Waypoint System</span> for NPC navigation</li>
                         </ul>
                     </div>
-                    <div className="hero-poster hero-poster--dual">
-                        <img src="/RayllProject/OtherSystems.gif" alt="Additional Systems Prototype" />
-                    </div>
+
                 </div>
 
                 <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Summary</h2>
@@ -303,7 +305,7 @@ const RayllStudio = () => {
 
     return (
         <main style={{ paddingBottom: "40px" }}>
-            <section className="experience-hero">
+            <section className="experience-hero" id="f2f-pc">
                 <div className="experience-section">
                     {fearstofathom.map((item, index) => (
                         <ExperienceAccordion key={index} data={item} />
@@ -311,7 +313,7 @@ const RayllStudio = () => {
                 </div>
             </section>
 
-            <section className="experience-hero">
+            <section className="experience-hero" id="f2f-mobile">
                 <div className="experience-section">
                     {f2fAndroidiOS.map((item, index) => (
                         <ExperienceAccordion key={index} data={item} />
@@ -319,7 +321,7 @@ const RayllStudio = () => {
                 </div>
             </section>
 
-            <section className="experience-hero">
+            <section className="experience-hero" id="f2f-unannounced">
                 <div className="experience-section">
                     {unannounced.map((item, index) => (
                         <ExperienceAccordion key={index} data={item} />

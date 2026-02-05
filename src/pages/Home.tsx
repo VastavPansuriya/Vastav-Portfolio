@@ -43,7 +43,7 @@ const Home = () => {
                             </span>
                         </p>
                         <h3>Showreel</h3>
-                        <div>
+                        <div className="home-video">
                             <iframe
                                 width="90%"
                                 height="500px"
