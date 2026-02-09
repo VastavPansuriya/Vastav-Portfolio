@@ -119,7 +119,7 @@ const workCompanies = [
                 image: "/Gifs/Unannounced.gif",
                 link: "/experience/RayllStudio#f2f-unannounced",
                 role: "Gameplay Programmer",
-                skills: ["Unity", "C#", "Scriptable Objects", "System Design", "Animation"]
+                skills: ["Unity", "C#", "Scriptable Objects", "System Design"]
             }
         ]
     },
@@ -132,16 +132,16 @@ const workCompanies = [
                 title: "i3 Simulations",
                 image: "/Gifs/i3SimGif.gif",
                 link: "/experience/i3simulation",
-                role: "Game Developer",
-                skills: ["Unreal Engine", "C++", "VR", "JSON", "FFmpeg", "Replay Systems"]
+                role: "Programmer",
+                skills: ["Unity", "C#", "Unreal Engine", "C++", "VR", "JSON", "FFmpeg", "Replay Systems"]
             },
             {
                 id: "5",
                 title: "Marquee Solution",
                 image: "/Gifs/KeyboardClicker.gif",
                 link: "/experience/marquee",
-                role: "Full Stack Developer",
-                skills: ["Unity", "C#", "Mobile", "Google Ads", "Analytics", "UI/UX"]
+                role: "Full Stack Game Programmer",
+                skills: ["Unity", "C#", "Mobile", "Google Ads", "Analytics", "UI/UX", "Android", "iOS"]
             }
             // {
             //     id: "6",
@@ -187,7 +187,7 @@ const personalProjects = [
         image: "Gifs/PawnGambit.gif",
         link: "/experience/personal",
         role: "Solo Developer",
-        skills: ["Unity", "C#", "Strategy", "AI", "Board Games"]
+        skills: ["Unity", "C#", "Puzzle", "Programming Patterns", "OOPs"]
     },
     {
         id: "11",
@@ -195,7 +195,7 @@ const personalProjects = [
         image: "Gifs/ZeroEffort.gif",
         link: "/experience/personal",
         role: "Solo Developer",
-        skills: ["Unity", "C#", "Minimalist", "Mobile", "Casual"]
+        skills: ["Unity", "C#", "Programming Patterns", "OOPs", "Casual"]
     },
     {
         id: "12",
@@ -203,7 +203,7 @@ const personalProjects = [
         image: "Gifs/Hurr.gif",
         link: "/experience/personal",
         role: "Solo Developer",
-        skills: ["Unity", "C#", "Experimental", "Sound", "Interaction"]
+        skills: ["Unity", "C#", "Programming Patterns", "Game Feel"]
     },
     {
         id: "13",
