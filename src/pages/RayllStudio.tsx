@@ -8,7 +8,7 @@ const fearstofathom: ExperienceItem[] = [
         type: "work",
         summary: (
             <div>
-                <h5><span className="highlight">PAGE IS UNDER CONSTRUCTION</span></h5>
+                {/* <h5><span className="highlight">PAGE IS UNDER CONSTRUCTION</span></h5> */}
 
                 <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - SCRATCH CREEK</h1>
                 <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Dialogue System</h2>

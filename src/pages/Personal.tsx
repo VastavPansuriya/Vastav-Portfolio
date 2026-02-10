@@ -7,7 +7,7 @@ const personalProjects: ExperienceItem[] = [
         type: "work",
         summary: (
             <div>
-                <h4><span className="highlight">PAGE IS UNDER CONSTRUCTION</span></h4>
+                {/* <h4><span className="highlight">PAGE IS UNDER CONSTRUCTION</span></h4> */}
                 <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>PERSONAL PROJECTS</h1>
 
                 <div className="hero-poster hero-poster--dual">
