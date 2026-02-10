@@ -30,7 +30,7 @@ const About = () => {
                                 <b>Movies that I like</b>
                             </p>
                             <p>GRAN TURISMO | MEET JOE BLACK | WHIPLASH</p>
-                            <Link className="clickable-buttons" to="/Vastav-Pansuriya.pdf"
+                            <Link className="clickable-buttons" to="/VastavPansuriya_2026.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"><ReadCvLogo size={20} weight="fill" style={{ marginTop: "2px" }} /></Link>
 
