@@ -1070,4 +1070,5 @@ ol li {
 .home-video iframe {
     max-width: 800px;
     border-radius: 13px;
+    height: 500px;
 }
