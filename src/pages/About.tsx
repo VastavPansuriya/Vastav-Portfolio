@@ -20,7 +20,7 @@ const About = () => {
 
                             <p style={{ marginTop: "8px", marginBottom: "15px" }}>
                                 Beyond my work life, I love visiting natural places, playing story-driven,
-                                FPS, and platformer games. I also enjoy drawing, playing music, and learning advanced mathematics.
+                                FPS, and platformer games. I would like to draw, play music, and learn advanced mathematics.
                             </p>
                             <p style={{ marginTop: "8px", marginBottom: "15px" }}>
                                 <b>Games that I like</b>
