@@ -45,8 +45,7 @@ const Home = () => {
                         <h3>Showreel</h3>
                         <div className="home-video">
                             <iframe
-                                width="90%"
-                                height="500px"
+                                width="100%"
                                 src="https://www.youtube.com/embed/hBH8SGsuhag"
                                 title="YouTube video player"
                                 frameBorder="0"
