@@ -17,7 +17,7 @@ const fearstofathom: ExperienceItem[] = [
                     rel="noopener noreferrer"
                     className="code-link"
                 >
-                    &lt;STEAM&gt;
+                    &lt;Steam&gt;
                 </Link>
                 <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Dialogue System</h2>
 
