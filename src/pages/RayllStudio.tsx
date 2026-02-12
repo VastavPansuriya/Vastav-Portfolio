@@ -11,6 +11,14 @@ const fearstofathom: ExperienceItem[] = [
                 {/* <h5><span className="highlight">PAGE IS UNDER CONSTRUCTION</span></h5> */}
 
                 <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - SCRATCH CREEK</h1>
+                <Link
+                    to="https://store.steampowered.com/app/4121170/Fears_to_Fathom__Scratch_Creek/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="code-link"
+                >
+                    &lt;STEAM&gt;
+                </Link>
                 <h2 style={{ color: "var(--accent)", marginBottom: "10px" }}>Dialogue System</h2>
 
                 <div className="hero-poster hero-poster-media">
@@ -151,7 +159,7 @@ const f2fAndroidiOS: ExperienceItem[] = [
         summary: (
             <div>
                 <h1 style={{ color: "var(--accent)", marginBottom: "10px" }}>FEARS TO FATHOM - ANDROID/IOS PORT</h1>
-
+                
                 <div className="hero-poster-media">
                     <div className="hero-poster-media__image">
                         <img src="/RayllProject/F2FHomeAlone.png" alt="Mobile Game Screenshot 1" />

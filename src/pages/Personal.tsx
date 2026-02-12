@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ExperienceAccordion from "../components/experience/ExperienceAccordion";
 import type { ExperienceItem } from "../components/experience/experience.types";
-
+import { Link } from "react-router-dom";
 const personalProjects: ExperienceItem[] = [
     {
         type: "work",
@@ -13,6 +13,14 @@ const personalProjects: ExperienceItem[] = [
                 <div className="hero-poster hero-poster--dual">
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Pawn Gambit (BYOG 2024 Winner)</h3>
+                        <Link
+                            to="https://vastav.itch.io/pawn-gambit"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="code-link"
+                        >
+                            &lt;Itch.IO&gt;
+                        </Link>
                         <div>
                             <div className="hero-poster hero-poster--dual">
                                 <img src="/Personal/PawnGambit.gif" alt="Pawn Gambit Gameplay 1" />
@@ -30,6 +38,14 @@ const personalProjects: ExperienceItem[] = [
 
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Zero Efforts</h3>
+                        <Link
+                            to="https://vastav.itch.io/zero-effort"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="code-link"
+                        >
+                            &lt;Itch.IO&gt;
+                        </Link>
                         <div className="hero-poster hero-poster--dual">
                             <img src="/Personal/ZeroEfforts.gif" alt="Zero Efforts Gameplay 1" />
                             <img src="/Personal/ZeroEfforts2.gif" alt="Zero Efforts Gameplay 2" />
@@ -46,6 +62,14 @@ const personalProjects: ExperienceItem[] = [
 
                     <div className="experience-text">
                         <h3 style={{ color: "var(--accent)", marginBottom: "10px" }}>Hurr</h3>
+                        <Link
+                            to="https://vastav.itch.io/hurrr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="code-link"
+                        >
+                            &lt;Itch.IO&gt;
+                        </Link>
                         <div className="hero-poster hero-poster--dual">
                             <img src="/Personal/Hurr.gif" alt="Hurr Gameplay 1" />
                             <img src="/Personal/Hurr2.gif" alt="Hurr Gameplay 2" />
