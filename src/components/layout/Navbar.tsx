@@ -1,60 +1,82 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#work" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
         document.body.classList.toggle("sidebar-open", open);
+
+        return () => {
+            document.body.classList.remove("sidebar-open");
+        };
     }, [open]);
 
-    return (
-        <header className="navbar ">
-            <div className="navbar-inner">
-                <div className="navbar-logo"></div>
+    const closeMenu = () => setOpen(false);
 
-                {/* Desktop links */}
-                <nav className="navbar-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/experience">Experience</Link>
-                    <Link to="/contact">Contact</Link>
+    return (
+        <header className="navbar">
+            <div className="navbar-inner">
+                <a className="navbar-brand" href="#home" onClick={closeMenu}>
+                    <span className="navbar-mark">V</span>
+                    <span>Vastav Pansuriya</span>
+                </a>
+
+                <nav className="navbar-links" aria-label="Main navigation">
+                    {navItems.map((item) => (
+                        <a key={item.href} href={item.href}>
+                            {item.label}
+                        </a>
+                    ))}
                 </nav>
 
-                {/* <a className="navbar-cta" href="/contact">
-                    Contact Me
-                </a> */}
+                <a className="navbar-cta" href="mailto:vastavpansuriya4444@gmail.com">
+                    Hire Me
+                </a>
 
-                {/* Mobile menu toggle */}
                 <button
                     className="navbar-toggle"
-                    onClick={() => setOpen(!open)}
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded={open}
+                    onClick={() => setOpen((value) => !value)}
                 >
-                    ☰
+                    <span />
+                    <span />
+                    <span />
                 </button>
             </div>
 
-            {/* Overlay */}
             <div
                 className={`sidebar-overlay ${open ? "show" : ""}`}
-                onClick={() => setOpen(false)}
+                onClick={closeMenu}
+                aria-hidden="true"
             />
 
-            {/* Sidebar */}
-            <aside className={`sidebar ${open ? "open" : ""}`}>
+            <aside className={`sidebar ${open ? "open" : ""}`} aria-label="Mobile navigation">
                 <button
                     className="sidebar-close"
-                    onClick={() => setOpen(false)}
+                    type="button"
+                    aria-label="Close menu"
+                    onClick={closeMenu}
                 >
-                    ✕
+                    x
                 </button>
 
                 <nav className="sidebar-links">
-                    <Link onClick={() => setOpen(false)} to="/">Home</Link>
-                    <Link onClick={() => setOpen(false)} to="/about">About</Link>
-                    <Link onClick={() => setOpen(false)} to="/experience">Experience</Link>
-                    <Link onClick={() => setOpen(false)} to="/contact">Contact</Link>
+                    {navItems.map((item) => (
+                        <a key={item.href} href={item.href} onClick={closeMenu}>
+                            {item.label}
+                        </a>
+                    ))}
                 </nav>
             </aside>
         </header>
