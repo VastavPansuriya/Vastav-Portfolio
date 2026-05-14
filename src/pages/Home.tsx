@@ -1,88 +1,131 @@
 import type { FormEvent } from "react";
 
-const selectedProjects = [
+const featuredProjects = [
     {
-        number: "01",
         title: "Fears to Fathom",
+        subtitle: "Previous work at Rayll Studio",
         description:
-            "Gameplay, interaction systems, multiplayer-facing features, and mobile porting work for narrative horror experiences.",
-        tags: ["Unity", "Gameplay", "Mobile"],
+            "Built and supported gameplay-facing systems for narrative horror experiences, including multiplayer interaction flow, dialogue integration, NPC behavior, traffic movement, and mobile porting support.",
         image: "/Gifs/RayllStudioGif.gif",
-        link: "/experience/RayllStudio#f2f-pc",
+        skills: [
+            "Unity",
+            "C#",
+            "Netcode for GameObjects",
+            "RPC Sync",
+            "PixelCrushers Dialogue System",
+            "UI Interaction System",
+            "Observer Pattern",
+            "NPC Systems",
+            "Traffic System",
+            "Spline Movement"
+        ]
     },
     {
-        number: "02",
         title: "Pawn Gambit",
+        subtitle: "BYOG 2024 winner",
         description:
-            "A chess-inspired puzzle project with custom mechanics, level logic, and editor-focused workflow.",
-        tags: ["Puzzle", "Tools", "Systems"],
+            "A chess-inspired puzzle game built for a game jam, focused on pawn evolution, movement rules, blockers, level progression, and a custom workflow for quickly building levels.",
         image: "/Personal/PawnGambit.gif",
-        link: "https://vastav.itch.io/pawn-gambit",
+        skills: [
+            "Unity",
+            "C#",
+            "Puzzle Systems",
+            "OOP",
+            "Design Patterns",
+            "Custom Level Editor",
+            "Editor Scripting",
+            "Level Design Tools",
+            "ScriptableObjects"
+        ]
     },
     {
-        number: "03",
-        title: "Unity Tools",
+        title: "Unity Tools & Systems",
+        subtitle: "Personal tooling work",
         description:
-            "Custom editor tools, workflow helpers, UI systems, and gameplay architecture experiments built in Unity.",
-        tags: ["Editor", "C#", "UX"],
+            "Custom Unity workflows and editor tools made to speed up production, organize project data, improve scene work, and reduce repeated manual setup.",
         image: "/Gifs/UnrealLikeDatatable.gif",
-        link: "/experience/personal",
-    },
+        skills: [
+            "Unity Editor Scripting",
+            "C#",
+            "Custom Editor Windows",
+            "ScriptableObject Workflows",
+            "Scene View Tools",
+            "Workflow UX",
+            "Data-Driven Tools"
+        ]
+    }
 ];
 
-const workItems = [
+const coreSkills = [
+    "Unity",
+    "C#",
+    "Gameplay Systems",
+    "System Architecture",
+    "OOP",
+    "Design Patterns",
+    "Netcode for GameObjects",
+    "RPC Synchronization",
+    "Editor Scripting",
+    "ScriptableObjects",
+    "Performance Optimization",
+    "Debugging"
+];
+
+const productionSkills = [
+    "Mobile Porting",
+    "Unity Profiler",
+    "New Input System",
+    "UI Systems",
+    "PixelCrushers Dialogue System",
+    "DOTween",
+    "Cinemachine",
+    "JSON Workflows",
+    "Git / GitHub",
+    "Notion",
+    "Firebase",
+    "Ad SDK Integration"
+];
+
+const experienceItems = [
     {
         company: "Rayll Studio",
         role: "Unity Gameplay Programmer",
-        time: "Current / Recent",
-        summary:
-            "Worked on Fears to Fathom systems, multiplayer interactions, mobile ports, gameplay features, and production support.",
+        period: "Previous experience",
+        description:
+            "Worked on Fears to Fathom related systems, multiplayer gameplay interactions, dialogue implementation, NPC systems, mobile porting, and gameplay polish."
     },
     {
         company: "Marquee Solution",
         role: "Full Stack Game Programmer",
-        time: "Earlier role",
-        summary:
-            "Built and shipped mobile games with ads, analytics, performance optimization, gameplay loops, and platform publishing.",
+        period: "Previous experience",
+        description:
+            "Built hyper-casual mobile games from scratch, integrated ads and analytics, worked on gameplay, UI, optimization, and Android/iOS publishing tasks."
     },
     {
-        company: "i3 Simulations",
-        role: "Programmer",
-        time: "Earlier role",
-        summary:
-            "Worked on VR and simulation systems, data playback, FFmpeg recording, training workflows, and technical problem solving.",
-    },
-];
-
-const skills = [
-    "Unity",
-    "C#",
-    "Gameplay Systems",
-    "Multiplayer",
-    "Mobile Optimization",
-    "UI Systems",
-    "Editor Tools",
-    "Debugging",
-    "System Architecture",
-    "Performance",
+        company: "Personal Projects",
+        role: "Solo / Team Developer",
+        period: "Ongoing learning and portfolio work",
+        description:
+            "Created game jam projects, puzzle mechanics, custom tools, gameplay prototypes, and Unity systems focused on clean architecture and polish."
+    }
 ];
 
 const Home = () => {
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
-        const form = event.currentTarget;
+        const form = e.currentTarget;
         const data = new FormData(form);
 
-        const response = await fetch("https://formspree.io/f/mykdgnlg", {
+        const res = await fetch("https://formspree.io/f/mykdgnlg", {
             method: "POST",
             body: data,
             headers: {
-                Accept: "application/json",
-            },
+                Accept: "application/json"
+            }
         });
 
-        if (response.ok) {
+        if (res.ok) {
             alert("Thanks! I will get back to you soon.");
             form.reset();
             return;
@@ -92,200 +135,173 @@ const Home = () => {
     };
 
     return (
-        <main className="vp-site-shell" id="top">
-            <section className="vp-hero-section">
+        <main className="vp-page-shell">
+            <section id="home" className="vp-hero-section">
                 <div className="vp-hero-copy">
-                    <div className="vp-status-pill">
+                    <div className="vp-eyebrow">
                         <span className="vp-status-dot" />
                         Available for Unity gameplay work
                     </div>
 
                     <h1>
-                        Unity <span>Gameplay</span> Programmer
+                        Unity Gameplay Programmer building clean, playable systems.
                     </h1>
 
                     <p className="vp-hero-text">
-                        I build polished gameplay systems, multiplayer features, editor tools,
-                        and production-ready Unity experiences.
+                        I am Vastav Pansuriya, a Unity programmer focused on gameplay systems, multiplayer interactions, tools, optimization, and production-ready game features.
                     </p>
 
                     <div className="vp-hero-actions">
-                        <a className="vp-button vp-button-dark" href="#projects">
+                        <a className="vp-button vp-button-primary" href="#projects">
                             View Projects
                         </a>
-                        <a className="vp-button" href="#contact">
+                        <a className="vp-button" href="mailto:vastavpansuriya4444@gmail.com">
                             Contact Me
                         </a>
                     </div>
                 </div>
 
-                <div className="vp-board" aria-label="Portfolio preview board">
-                    <article className="vp-board-card vp-board-card-main">
-                        <div className="vp-mini-label">Featured focus</div>
-                        <div className="vp-feature-row">
-                            <div className="vp-preview-image" />
-                            <div>
-                                <h2>Systems that feel simple to play and clean to maintain.</h2>
-                                <p>
-                                    Player interaction, UI flow, multiplayer sync, mobile optimization,
-                                    and tools that help production move faster.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
+                <div className="vp-hero-board" aria-label="Portfolio summary board">
+                    <div className="vp-board-card vp-board-card-large">
+                        <span className="vp-card-kicker">Focus</span>
+                        <h2>Gameplay systems that feel simple to play and clean to maintain.</h2>
+                        <p>
+                            Player interactions, dialogue flow, networked systems, mobile performance, editor tools, and polished Unity workflows.
+                        </p>
+                    </div>
 
-                    <article className="vp-board-card vp-board-card-list">
-                        <div className="vp-mini-label">How I work</div>
-                        <ul>
-                            <li>Readable C# architecture</li>
-                            <li>Designer-friendly tools</li>
-                            <li>Performance-aware systems</li>
-                        </ul>
-                    </article>
+                    <div className="vp-board-card vp-board-card-small">
+                        <span className="vp-card-kicker">Core Stack</span>
+                        <p>Unity, C#, Netcode, Editor Scripting, ScriptableObjects, UI Systems, Optimization.</p>
+                    </div>
 
-                    <article className="vp-note-card">
+                    <div className="vp-sticky-note">
                         <strong>Simple goal</strong>
-                        <p>Turn ideas into playable, polished game moments.</p>
-                    </article>
+                        <span>Make the game feel better and the code easier to work with.</span>
+                    </div>
                 </div>
             </section>
 
-            <section className="vp-section" id="projects">
+            <section id="projects" className="vp-section">
                 <div className="vp-section-heading">
-                    <h2>Selected projects</h2>
+                    <span>Selected work</span>
+                    <h2>Projects and systems</h2>
                     <p>
-                        A compact look at the kind of gameplay systems, production work,
-                        and Unity tooling I like building.
+                        A focused look at the kind of gameplay, tooling, multiplayer, and production work I have done.
                     </p>
                 </div>
 
                 <div className="vp-project-grid">
-                    {selectedProjects.map((project) => (
-                        <a
-                            key={project.title}
-                            className="vp-project-card"
-                            href={project.link}
-                            target={project.link.startsWith("http") ? "_blank" : undefined}
-                            rel={project.link.startsWith("http") ? "noreferrer" : undefined}
-                        >
-                            <div className="vp-project-thumb">
+                    {featuredProjects.map((project) => (
+                        <article className="vp-project-card" key={project.title}>
+                            <div className="vp-project-media">
                                 <img src={project.image} alt={project.title} />
                             </div>
+
                             <div className="vp-project-content">
-                                <span>{project.number}</span>
+                                <p className="vp-project-subtitle">{project.subtitle}</p>
                                 <h3>{project.title}</h3>
                                 <p>{project.description}</p>
-                                <div className="vp-tags">
-                                    {project.tags.map((tag) => (
-                                        <small key={tag}>{tag}</small>
+
+                                <div className="vp-tag-list">
+                                    {project.skills.map((skill) => (
+                                        <span className="vp-tag" key={`${project.title}-${skill}`}>
+                                            {skill}
+                                        </span>
                                     ))}
                                 </div>
                             </div>
-                        </a>
-                    ))}
-                </div>
-            </section>
-
-            <section className="vp-section" id="skills">
-                <div className="vp-split-panel">
-                    <div className="vp-soft-card">
-                        <h2>Skills</h2>
-                        <p>
-                            Focused on practical gameplay implementation, clean systems,
-                            and production problem solving.
-                        </p>
-                    </div>
-
-                    <div className="vp-skill-cloud">
-                        {skills.map((skill) => (
-                            <span key={skill}>
-                                <i />
-                                {skill}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            <section className="vp-section" id="experience">
-                <div className="vp-section-heading">
-                    <h2>Experience</h2>
-                    <p>
-                        Real project work across horror games, mobile games, simulation,
-                        tools, optimization, and gameplay systems.
-                    </p>
-                </div>
-
-                <div className="vp-experience-list">
-                    {workItems.map((item) => (
-                        <article className="vp-experience-item" key={item.company}>
-                            <div>
-                                <h3>{item.company}</h3>
-                                <p>{item.role}</p>
-                            </div>
-                            <span>{item.time}</span>
-                            <p>{item.summary}</p>
                         </article>
                     ))}
                 </div>
             </section>
 
-            <section className="vp-section" id="about">
+            <section id="skills" className="vp-section">
+                <div className="vp-section-heading">
+                    <span>Skills</span>
+                    <h2>What I work with</h2>
+                    <p>
+                        Focused on practical Unity programming skills that matter in production, not random keywords.
+                    </p>
+                </div>
+
+                <div className="vp-skills-layout">
+                    <article className="vp-skill-panel">
+                        <h3>Core skills</h3>
+                        <div className="vp-skill-list">
+                            {coreSkills.map((skill) => (
+                                <span className="vp-skill-pill" key={skill}>{skill}</span>
+                            ))}
+                        </div>
+                    </article>
+
+                    <article className="vp-skill-panel">
+                        <h3>Production skills</h3>
+                        <div className="vp-skill-list">
+                            {productionSkills.map((skill) => (
+                                <span className="vp-skill-pill" key={skill}>{skill}</span>
+                            ))}
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" className="vp-section">
+                <div className="vp-section-heading">
+                    <span>Experience</span>
+                    <h2>Previous roles and project work</h2>
+                    <p>
+                        My experience covers shipped horror games, mobile ports, hyper-casual projects, game jam work, and custom Unity tooling.
+                    </p>
+                </div>
+
+                <div className="vp-experience-list">
+                    {experienceItems.map((item) => (
+                        <article className="vp-experience-card" key={item.company}>
+                            <div>
+                                <span>{item.period}</span>
+                                <h3>{item.company}</h3>
+                                <p className="vp-experience-role">{item.role}</p>
+                            </div>
+                            <p>{item.description}</p>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
+            <section id="about" className="vp-section">
                 <div className="vp-about-card">
-                    <div className="vp-avatar-card">
-                        <img src="/avatar.png" alt="Vastav Pansuriya" />
+                    <div className="vp-about-image">
+                        <img src="/avatar.png" alt="Vastav Pansuriya avatar" />
                     </div>
 
-                    <div className="vp-about-copy">
-                        <h2>I like building systems that players never notice, but always feel.</h2>
+                    <div className="vp-about-content">
+                        <span>About me</span>
+                        <h2>I like building systems players do not notice, but always feel.</h2>
                         <p>
-                            I am Vastav Pansuriya, a Unity gameplay programmer focused on
-                            clean gameplay architecture, interaction systems, multiplayer features,
-                            UI flow, editor tools, and optimization.
+                            I started by learning Unity and C# and kept growing into gameplay programming, tools, mobile optimization, multiplayer systems, and game architecture. I care about writing clean code, understanding the system deeply, and making gameplay feel polished.
                         </p>
                         <p>
-                            My goal is simple: make the game feel better, make the code easier
-                            to work with, and help teams ship polished experiences.
+                            Outside work, I enjoy story-driven games, platformers, natural places, drawing, music, and learning advanced mathematics.
                         </p>
-
-                        <div className="vp-stats">
-                            <div>
-                                <strong>4+</strong>
-                                <span>Years experience</span>
-                            </div>
-                            <div>
-                                <strong>5+</strong>
-                                <span>Shipped titles</span>
-                            </div>
-                            <div>
-                                <strong>100%</strong>
-                                <span>Unity focused</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="vp-section" id="contact">
+            <section id="contact" className="vp-section">
                 <div className="vp-contact-card">
                     <div className="vp-contact-copy">
-                        <h2>Let us build something great.</h2>
+                        <span>Contact</span>
+                        <h2>Let us build something clean and playable.</h2>
                         <p>
-                            Open to Unity gameplay programming work, freelance projects,
-                            and strong game ideas.
+                            Have a Unity project, gameplay system, prototype, or tool idea? Send me a message.
                         </p>
 
                         <div className="vp-contact-links">
                             <a href="mailto:vastavpansuriya4444@gmail.com">Email</a>
-                            <a href="https://github.com/VastavPansuriya" target="_blank" rel="noreferrer">
-                                GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/" target="_blank" rel="noreferrer">
-                                LinkedIn
-                            </a>
-                            <a href="https://vastav.itch.io/" target="_blank" rel="noreferrer">
-                                Itch.io
-                            </a>
+                            <a href="https://www.linkedin.com/in/vastav-pansuriya-54234a24a/" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a href="https://github.com/VastavPansuriya" target="_blank" rel="noreferrer">GitHub</a>
+                            <a href="https://vastav.itch.io/" target="_blank" rel="noreferrer">Itch.io</a>
                         </div>
                     </div>
 

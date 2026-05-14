@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer className="vp-footer">
-            <p>© {new Date().getFullYear()} Vastav Pansuriya. Built with care and Unity mindset.</p>
+            <p>© {new Date().getFullYear()} Vastav Pansuriya. Built with a Unity mindset.</p>
             <div>
                 <a href="https://vastavpansuriya.com" target="_blank" rel="noreferrer">Portfolio</a>
                 <a href="https://github.com/VastavPansuriya" target="_blank" rel="noreferrer">GitHub</a>
