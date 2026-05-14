@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-    { label: "Home", href: "#home" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
-    { label: "Experience", href: "#work" },
+    { label: "Experience", href: "#experience" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
 ];
@@ -13,40 +12,39 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        document.body.classList.toggle("sidebar-open", open);
+        document.body.classList.toggle("vp-menu-open", open);
 
         return () => {
-            document.body.classList.remove("sidebar-open");
+            document.body.classList.remove("vp-menu-open");
         };
     }, [open]);
 
     const closeMenu = () => setOpen(false);
 
     return (
-        <header className="navbar">
-            <div className="navbar-inner">
-                <a className="navbar-brand" href="#home" onClick={closeMenu}>
-                    <span className="navbar-mark">V</span>
-                    <span>Vastav Pansuriya</span>
+        <header className="vp-navbar">
+            <div className="vp-navbar-inner">
+                <a className="vp-brand" href="/#top" onClick={closeMenu}>
+                    <span>V</span>
+                    <strong>Vastav Pansuriya</strong>
                 </a>
 
-                <nav className="navbar-links" aria-label="Main navigation">
+                <nav className="vp-nav-links" aria-label="Main navigation">
                     {navItems.map((item) => (
-                        <a key={item.href} href={item.href}>
+                        <a key={item.href} href={`/${item.href}`}>
                             {item.label}
                         </a>
                     ))}
                 </nav>
 
-                <a className="navbar-cta" href="mailto:vastavpansuriya4444@gmail.com">
+                <a className="vp-nav-cta" href="mailto:vastavpansuriya4444@gmail.com">
                     Hire Me
                 </a>
 
                 <button
-                    className="navbar-toggle"
+                    className="vp-menu-button"
                     type="button"
                     aria-label="Open menu"
-                    aria-expanded={open}
                     onClick={() => setOpen((value) => !value)}
                 >
                     <span />
@@ -55,30 +53,16 @@ const Navbar = () => {
                 </button>
             </div>
 
-            <div
-                className={`sidebar-overlay ${open ? "show" : ""}`}
-                onClick={closeMenu}
-                aria-hidden="true"
-            />
-
-            <aside className={`sidebar ${open ? "open" : ""}`} aria-label="Mobile navigation">
-                <button
-                    className="sidebar-close"
-                    type="button"
-                    aria-label="Close menu"
-                    onClick={closeMenu}
-                >
-                    x
-                </button>
-
-                <nav className="sidebar-links">
-                    {navItems.map((item) => (
-                        <a key={item.href} href={item.href} onClick={closeMenu}>
-                            {item.label}
-                        </a>
-                    ))}
-                </nav>
-            </aside>
+            <div className={`vp-mobile-menu ${open ? "open" : ""}`}>
+                {navItems.map((item) => (
+                    <a key={item.href} href={`/${item.href}`} onClick={closeMenu}>
+                        {item.label}
+                    </a>
+                ))}
+                <a href="mailto:vastavpansuriya4444@gmail.com" onClick={closeMenu}>
+                    Hire Me
+                </a>
+            </div>
         </header>
     );
 };
